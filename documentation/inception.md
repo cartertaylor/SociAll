@@ -1,5 +1,4 @@
 # Project Inception 
-...and edit thing 
 
 ## 1. Introduction
 
@@ -9,13 +8,14 @@
 
 ### Interview 1:
 
-**Summary:**
+**Summary: Gia Neve found that SociAll would mostly be benefically in a business marketing sense, but has potential in a laidback social setting.
+  **
 
-**Interviewer:**
+**Interviewer: Ethan Baranowski**
 
-**Interviewee:**
+**Interviewee: Gia Neve**
 
-**When:** 
+**When: 02/05/2021** 
 
 **Consumer Segments:**
 
