@@ -28,9 +28,13 @@
 ### Interview 2:
 
 **Summary:**
+
 **Interviewer:**
+
 **Interviewee:**
-**When:** 
+
+**When:**
+
 **Consumer Segments:**
 
 **Key insights**
@@ -42,9 +46,13 @@
 ### Interview 3:
 
 **Summary:**
+
 **Interviewer:**
+
 **Interviewee:**
+
 **When:** 
+
 **Consumer Segments:**
 
 **Key insights**
@@ -56,9 +64,13 @@
 ### Interview 4:
 
 **Summary:**
+
 **Interviewer:**
+
 **Interviewee:**
+
 **When:** 
+
 **Consumer Segments:**
 
 **Key insights**
@@ -70,9 +82,13 @@
 ### Interview 5:
 
 **Summary:**
+
 **Interviewer:**
+
 **Interviewee:**
+
 **When:** 
+
 **Consumer Segments:**
 
 **Key insights**
@@ -84,9 +100,13 @@
 ### Interview 6:
 
 **Summary:**
+
 **Interviewer:**
+
 **Interviewee:**
+
 **When:** 
+
 **Consumer Segments:**
 
 **Key insights**
@@ -98,9 +118,13 @@
 ### Interview 7:
 
 **Summary:**
+
 **Interviewer:**
+
 **Interviewee:**
+
 **When:** 
+
 **Consumer Segments:**
 
 **Key insights**
@@ -112,9 +136,13 @@
 ### Interview 8:
 
 **Summary:**
+
 **Interviewer:**
+
 **Interviewee:**
+
 **When:** 
+
 **Consumer Segments:**
 
 **Key insights**
@@ -126,9 +154,13 @@
 ### Interview 9:
 
 **Summary:**
+
 **Interviewer:**
+
 **Interviewee:**
+
 **When:** 
+
 **Consumer Segments:**
 
 **Key insights**
@@ -140,9 +172,13 @@
 ### Interview 10:
 
 **Summary:**
+
 **Interviewer:**
+
 **Interviewee:**
+
 **When:** 
+
 **Consumer Segments:**
 
 **Key insights**
@@ -154,9 +190,13 @@
 ### Interview 11:
 
 **Summary:**
+
 **Interviewer:**
+
 **Interviewee:**
+
 **When:** 
+
 **Consumer Segments:**
 
 **Key insights**
