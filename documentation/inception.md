@@ -10,9 +10,13 @@
 ### Interview 1:
 
 **Summary:**
+
 **Interviewer:**
+
 **Interviewee:**
+
 **When:** 
+
 **Consumer Segments:**
 
 **Key insights**
