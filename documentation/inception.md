@@ -8,22 +8,25 @@
 
 ### Interview 1:
 
-**Summary: Gia Neve found that SociAll would mostly be benefically in a business marketing sense, but has potential in a laidback social setting.
-  **
+**Summary:** Gia Neve found that SociAll would mostly be used in a business marketing sense, but has potential in a laidback social setting. She had many ideas
+and contributions to potential features, finding that it would be most useful to have dedicated settings for non-professional and professional profiles/engagement capabilities.
 
-**Interviewer: Ethan Baranowski**
+**Interviewer:** Ethan Baranowski
 
-**Interviewee: Gia Neve**
+**Interviewee:** Gia Neve
 
-**When: 02/05/2021** 
+**When:** 02/05/2021
 
 **Consumer Segments:**
 
-**Key insights**
+**Key insights:** Believes that two separate settings for buisness settings and social settings should be implemented. Gia states that she 
+ would not post anything important to Facebook or Twitter unless it was for business purposes. Concerns around formatting for each media site also
+ brought concern. She also believed that in a "non-professional" setting, multiple posting abilities would be nice to have. In addition, she was in favor
+ of extra security and password storing but was confused on the functionailty of it. (Had thoughts on in-app encrypted key operations)
 
-**Representative quotes**
+**Representative quotes:** "I believe the app has a lot of potential for increasing traffic for businesses, but also easing the efforts of connecting with friends in a public setting"
 
-**Assessment: Must have / Nice to have / Don’t care**
+**Assessment: (Must have / Nice to have / Don’t care):** Gia thought this app would be "nice to have", but a "must have" in for marketing focused individuals. 
 
 ### Interview 2:
 
