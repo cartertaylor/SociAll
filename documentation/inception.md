@@ -30,7 +30,7 @@ and contributions to potential features, finding that it would be most useful to
 
 ### Interview 2:
 
-**Summary:** This would not be the most useful for Skyeler becasue he does not use Social media. But he does use social media like Reddit, or if there would be some way to connect it to video game accounts. 
+**Summary:** This would not be the most useful for Skyeler becasue he does not use Social media. But he does use social media like Reddit, or if there would be some way to connect it to video game accounts. Thinks an extension of accounts could make it even more popular
 
 **Interviewer:** Carter Taylor
 
