@@ -1,8 +1,19 @@
 # Project Inception 
 
+*Group 05 - "[SociAll]"*
+*Date and location: February 6, 2021*
+*Group Members: Carter Taylor, Ethan Baranowski, Dakota Battle, Liam Scholl, Max Mosier, Quinn Melssen, William Fuertes
+
 ## 1. Introduction
+With there being more and more social media websites that people can interact in, the need to link all of these social media accounts to one location has arisen. SociAll is designed to create this single location so that a person can link all of their social media accounts. Users will be able to create a profile with SociAll where they will be able to link any social media profile that they have. The users will then be able to add a person on all of their linked social media acocunts simply by adding/following someones SociAll account. Future additions may include things like: a QR reader so that people can easily add/follow someone on SociAll, a feature to un-add/un-follow someone on SociAll, a way to view someones linked social media accounts so people like employers could easily see an applicants social medias in one location, and a way to have a social media setting and a business setting for your profile.
 
 ## 2. Initial value proposition and consumer segments
+IVP:
+SociAll is going to be a free application that is designed for people to easily add someone else on all applicable social media accounts.
+
+Initial Consumer Segements:
+- Anyone who uses social media.
+- Employers looking to view applicants social media pages
 
 ## 3. Interviews summary
 
@@ -84,39 +95,43 @@ and contributions to potential features, finding that it would be most useful to
 
 ### Interview 5:
 
-**Summary:**
+**Summary:** Paige thought that SociAll is a good idea. She believes that their is a need for it so that it would work to make it. She thought that the app would be a matter of convenience so that it is easier to add one person on all social media. 
 
-**Interviewer:**
+**Interviewer:** Max Mosier
 
-**Interviewee:**
+**Interviewee:** Paige Thowson
 
-**When:** 
+**When:** 2/6/2021
 
-**Consumer Segments:**
+**Consumer Segments:** 
+- Anyone with two or more social media accounts. 
+- Employers (If there was a search for person feature).
 
-**Key insights**
+**Key insights** It would be really convenient to be able to add someone in one location instead of many. This is because you only have to add one username when a person could have different usernames for each social media.
 
-**Representative quotes**
+**Representative quotes** "Convenience is nice." - Paige
 
-**Assessment: Must have / Nice to have / Don’t care**
+**Assessment: Must have / Nice to have / Don’t care** Nice to have. They don't think its a must have app, but convenience is really nice.
 
 ### Interview 6:
 
-**Summary:**
+**Summary:** Stephen personally saw no use for SociAll. He only uses Facebook and he very rarely adds new people. He also has a LinkedIn which could be used be he would want to keep work and social seperate.
 
-**Interviewer:**
+**Interviewer:** Max Mosier
 
-**Interviewee:**
+**Interviewee:** Stephen Williams
 
-**When:** 
+**When:** 2/6/2021
 
-**Consumer Segments:**
+**Consumer Segments:** 
+- Anyone with two or more social media accounts.
+- Employers (If there was a search for person feature).
 
-**Key insights**
+**Key insights** He could see an interest in the app for some people, but he personally wasn't interested.
 
 **Representative quotes**
 
-**Assessment: Must have / Nice to have / Don’t care**
+**Assessment: Must have / Nice to have / Don’t care** Don't care. Stephen doesn't really care about the concept of SociAll because he doesn't use it enough.
 
 ### Interview 7:
 
@@ -210,3 +225,8 @@ and contributions to potential features, finding that it would be most useful to
 
 
 ## 4. Final value propistion and consumer segments
+Final Value Proposition: SociAll is a free application that allows someone to easily add/follow someone on their social media accounts.
+
+Consumer Segments:
+- Anyone who uses social media.
+- Employers looking to view applicants social media pages
