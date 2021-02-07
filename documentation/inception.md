@@ -62,7 +62,7 @@ and contributions to potential features, finding that it would be most useful to
 
 **Representative quotes** "Nice to have for instagram influencers to manage their "livelihood"
 
-**Assessment: Must have / Nice to have / Don’t care**  Jesse would not use it personally.
+**Assessment: (Must have / Nice to have / Don’t care):**  Jess would not use it personally.
 
 ### Interview 4:
 
