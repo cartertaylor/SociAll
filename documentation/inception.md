@@ -30,41 +30,23 @@ and contributions to potential features, finding that it would be most useful to
 
 ### Interview 2:
 
-**Summary:** This would not be the most useful for Skyeler becasue he does not use Social media. But he does use social media like Reddit, or if there would be some way to connect it to video game accounts. 
+**Summary:**
 
-**Interviewer:** Carter Taylor
+**Interviewer:**
 
-**Interviewee:** Skyeler Moody 
+**Interviewee:**
 
-**When:** 2/6/21
+**When:**
 
 **Consumer Segments:**
 
-**Key insights:** Slyeler would if you could connect your other media accounts (disney plus, netflix, hulu, etc...) in order to broaden the market audience. Additionally as a gamer, he would really like if there was a way for him to connect to his friends video game accounts
+**Key insights**
 
-**Representative quotes** "If I could find an easy way to find my friends on video games, I would love that" 
+**Representative quotes**
 
-**Assessment: (Must have / Nice to have / Don’t care)** For Skyeler, if it had all his steaming and game stuff, it would be a must have.
+**Assessment: Must have / Nice to have / Don’t care**
 
 ### Interview 3:
-
-**Summary:** If it was a password manager, Jess would prefer not to be using that feature. Jess would want to make sure that there is some good security in the case where someone might be able to get into your accounts. But Jess also thinks that it could be expanded even more if there was a way for you to connect streaming platforms to it. 
-
-**Interviewer:** Carter Taylor
-
-**Interviewee:** Jess
-
-**When:** 2/6/2021
-
-**Consumer Segments:**
-
-**Key insights** Jess could see another use by having steaming platforms connected in addition to the social media accounts. 
-
-**Representative quotes** "Nice to have for instagram influencers to manage their "livelihood"
-
-**Assessment: (Must have / Nice to have / Don’t care):**  Jess would not use it personally.
-
-### Interview 4:
 
 **Summary:**
 
@@ -81,6 +63,24 @@ and contributions to potential features, finding that it would be most useful to
 **Representative quotes**
 
 **Assessment: Must have / Nice to have / Don’t care**
+
+### Interview 4:
+
+**Summary:** Jose thought that SociAll would be nice to have especially for influencers but his main concern would be privacy and possible security breaches.
+
+**Interviewer:** William Fuertes
+
+**Interviewee:** Jose Raya
+
+**When:** 2/6/2021
+
+**Consumer Segments:**
+
+**Key insights** Main concern would be password managing and thinks that a lot of people would use it especially for those that have multiple passwords. It will also influence others to have multiple passwords.
+
+**Representative quotes** "I like the name. It is very catchy" - Jose Raya
+
+**Assessment: Must have / Nice to have / Don’t care** Nice to have especially for influencers or people that in the higher hierarchy.
 
 ### Interview 5:
 
