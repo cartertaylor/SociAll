@@ -30,39 +30,39 @@ and contributions to potential features, finding that it would be most useful to
 
 ### Interview 2:
 
-**Summary:**
+**Summary:** This would not be the most useful for Skyeler becasue he does not use Social media. But he does use social media like Reddit, or if there would be some way to connect it to video game accounts. 
 
-**Interviewer:**
+**Interviewer:** Carter Taylor
 
-**Interviewee:**
+**Interviewee:** Skyeler Moody 
 
-**When:**
+**When:** 2/6/21
 
 **Consumer Segments:**
 
-**Key insights**
+**Key insights:** Slyeler would if you could connect your other media accounts (disney plus, netflix, hulu, etc...) in order to broaden the market audience. Additionally as a gamer, he would really like if there was a way for him to connect to his friends video game accounts
 
-**Representative quotes**
+**Representative quotes** "If I could find an easy way to find my friends on video games, I would love that" 
 
-**Assessment: Must have / Nice to have / Don’t care**
+**Assessment: (Must have / Nice to have / Don’t care)** For Skyeler, if it had all his steaming and game stuff, it would be a must have.
 
 ### Interview 3:
 
-**Summary:**
+**Summary:** If it was a password manager, Jess would prefer not to be using that feature. Jess would want to make sure that there is some good security in the case where someone might be able to get into your accounts. But Jess also thinks that it could be expanded even more if there was a way for you to connect streaming platforms to it. 
 
-**Interviewer:**
+**Interviewer:** Carter Taylor
 
-**Interviewee:**
+**Interviewee:** Jess
 
-**When:** 
+**When:** 2/6/2021
 
 **Consumer Segments:**
 
-**Key insights**
+**Key insights** Jess could see another use by having steaming platforms connected in addition to the social media accounts. 
 
-**Representative quotes**
+**Representative quotes** "Nice to have for instagram influencers to manage their "livelihood"
 
-**Assessment: Must have / Nice to have / Don’t care**
+**Assessment: (Must have / Nice to have / Don’t care):**  Jess would not use it personally.
 
 ### Interview 4:
 
