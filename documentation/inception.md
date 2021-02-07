@@ -135,39 +135,39 @@ and contributions to potential features, finding that it would be most useful to
 
 ### Interview 7:
 
-**Summary:**
+**Summary:** Brendan thought that the idea itself was good, but perticularly felt as though he would use the text chat portion of things for meeeting new people. He was not sure if he would sign up, but liked the idea of being able to find other people who had decided to. He encouraged us to look for more incentives to get people to sign up in the first place.
 
-**Interviewer:**
+**Interviewer:** Quinn Melssen 
 
-**Interviewee:**
+**Interviewee:** Brendan Mellady
 
-**When:** 
+**When:** 2/6/2021
 
-**Consumer Segments:**
+**Consumer Segments:** 
 
-**Key insights**
+**Key insights** -Needs incentive to sign up in the first place, or functionality where you don't have to.
 
-**Representative quotes**
+**Representative quotes** "Finding someone's profiles all at once could make adding people a lot easier."
 
-**Assessment: Must have / Nice to have / Don’t care**
+**Assessment: Must have / Nice to have / Don’t care** Nice to have
 
 ### Interview 8:
 
-**Summary:**
+**Summary:** Lexi thought that this was a great idea! She is the VP of a political marketing company and thought that being able to push ONE social media keychain, as opposed to 8 different social media accounts, would make her life a lot easier in her work. She also does a lot of hiring and likes the idea of being able to look people up and see all their various social medias in one place, but was wary that some people wouldn't necessarily want that.
 
-**Interviewer:**
+**Interviewer:** Quinn Melssen
 
-**Interviewee:**
+**Interviewee:** Alexi Melssen
 
-**When:** 
+**When:** 2/7/2021
 
 **Consumer Segments:**
 
-**Key insights**
+**Key insights** -Needs an option to hide certain accounts for those that don't want everything on their account displaye
 
-**Representative quotes**
+**Representative quotes** "I'm not sure everyone wants their LinkedIn directly next to their Instagram"
 
-**Assessment: Must have / Nice to have / Don’t care**
+**Assessment: Must have / Nice to have / Don’t care** Must Have
 
 ### Interview 9:
 
