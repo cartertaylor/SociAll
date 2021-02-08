@@ -25,3 +25,11 @@
 body { 
     padding-bottom: 70px;
  }
+
+
+.btn-color-prim{
+  color:white;
+  background-color: #c34271;
+  border-color: #c34271;
+
+ }

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale = 1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        
+        <!-- Created CSS -->
+        <link rel="stylesheet" type="text/css" href="../res/css/landingPage.css">
+
+        <!-- Will add a required script tag for JS at a future date --> 
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+        <!-- Modal Code (pop up from log in button)-->
+        <script>$('#myModal').modal(options)</script>
+
+        <title>SociAll</title>
+    </head>
+
+
+    
+    <body>
+      <!-- Nav Bar-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top ">
+        <div class = "container-fluid">
+          <a class = "navbar-brand" href = "#"><img src = "../res/images/TempLogo.png" height = "50" width = "50"></a>
+          <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarResponsive">
+            <span class = "navbar-toggler-icon"></span>
+          </button>
+          <div class = "collapse navbar-collapse " id = "navbarResponsive">
+            <ul class = "navbar-nav ms-auto">
+              <li class = "nav-item active">
+                <a class = "nav-link text-white" href = "../index.html">Home</a>
+              </li>
+              <li class = "nav-item active">
+                <a class = "nav-link text-white" href = "#">About Us</a>
+              </li>
+              <li class = "nav-item active">
+                <a class = "nav-link text-white" href = "#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Form for Signing up-->
+      <div class = "container d-flex justify-content-center mt-4">
+        <form>
+          <div class="row ">
+
+            <!-- First Name Row -->
+            <div class="col-md-6  mb-3">
+              <label for="validationDefault01">First name</label>
+              <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="" required>
+            </div>
+
+            <!-- Last Name Row-->
+            <div class="col-md-6 mb-3">
+              <label for="validationDefault02">Last name</label>
+              <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="" required>
+            </div>
+
+            <!-- Phone Number Row-->
+            <div class="col-md-6 offset-md-3 mb-3">
+              <label for="validationDefault04">Phone Number</label>
+              <input type="text" class="form-control" id="validationDefault04" placeholder="Phone Number" required>
+            </div>
+
+            <!-- Email Row-->
+            <div class="col-md-6 offset-md-3 mb-3">
+              <label for="validationDefault03">Email</label>
+              <input type="text" class="form-control" id="validationDefault03" placeholder="Email" required>
+            </div>
+
+            <!-- User Name Row-->
+            <div class="col-md-6 offset-md-3 mb-3">
+              <label for="validationDefaultUsername">Username</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                </div>
+                <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Agree Checkmark and Sign up button-->
+          <div class="form-group text d-flex justify-content-center">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+              <label class="form-check-label" for="invalidCheck2">
+                Agree to terms and conditions
+              </label>
+            </div>
+          </div>
+
+          <div class = "text-center">
+            <button class="btn btn-color-prim tex" type="submit">Submit form</button>
+          </div>
+        </form>
+
+      </div> <!-- End of Form-->
+
+
+      <!-- Footer -->
+      <footer class = "footer bg-dark fixed-bottom">
+        <div class="container">
+          <span class="text-muted">SociAll</span>
+        </div>
+      </footer>
+
+    </body>
+</html>
