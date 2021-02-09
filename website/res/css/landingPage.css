@@ -21,7 +21,27 @@
     margin: 5rem 0;
 }
 
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
 /* prevents footer from covering content at bottom */
 body { 
     padding-bottom: 70px;
  }
+
+
+.btn-color-prim{
+  color:white;
+  background-color: #c34271;
+  border-color: #c34271;
+
+ }
+
+.light-font-weight{
+  font-weight:300;
+}
