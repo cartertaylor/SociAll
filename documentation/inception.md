@@ -1,4 +1,4 @@
-# Project Inception 
+# Project Inception
 
 *Group 05 - "[SociAll]"*
 *Date and location: February 6, 2021*
@@ -30,14 +30,14 @@ and contributions to potential features, finding that it would be most useful to
 
 **Consumer Segments:**
 
-**Key insights:** Believes that two separate settings for buisness settings and social settings should be implemented. Gia states that she 
+**Key insights:** Believes that two separate settings for buisness settings and social settings should be implemented. Gia states that she
  would not post anything important to Facebook or Twitter unless it was for business purposes. Concerns around formatting for each media site also
  brought concern. She also believed that in a "non-professional" setting, multiple posting abilities would be nice to have. In addition, she was in favor
  of extra security and password storing but was confused on the functionailty of it. (Had thoughts on in-app encrypted key operations)
 
 **Representative quotes:** "I believe the app has a lot of potential for increasing traffic for businesses, but also easing the efforts of connecting with friends in a public setting"
 
-**Assessment: (Must have / Nice to have / Don’t care):** Gia thought this app would be "nice to have", but a "must have" in for marketing focused individuals. 
+**Assessment: (Must have / Nice to have / Don’t care):** Gia thought this app would be "nice to have", but a "must have" in for marketing focused individuals.
 
 ### Interview 2:
 
@@ -45,7 +45,7 @@ and contributions to potential features, finding that it would be most useful to
 
 **Interviewer:** Carter Taylor
 
-**Interviewee:** Skyeler Moody 
+**Interviewee:** Skyeler Moody
 
 **When:** 2/6/21
 
@@ -53,13 +53,13 @@ and contributions to potential features, finding that it would be most useful to
 
 **Key insights:** Slyeler would if you could connect your other media accounts (disney plus, netflix, hulu, etc...) in order to broaden the market audience. Additionally as a gamer, he would really like if there was a way for him to connect to his friends video game accounts
 
-**Representative quotes** "If I could find an easy way to find my friends on video games, I would love that" 
+**Representative quotes** "If I could find an easy way to find my friends on video games, I would love that"
 
 **Assessment: (Must have / Nice to have / Don’t care)** For Skyeler, if it had all his steaming and game stuff, it would be a must have.
 
 ### Interview 3:
 
-**Summary:** If it was a password manager, Jess would prefer not to be using that feature. Jess would want to make sure that there is some good security in the case where someone might be able to get into your accounts. But Jess also thinks that it could be expanded even more if there was a way for you to connect streaming platforms to it. 
+**Summary:** If it was a password manager, Jess would prefer not to be using that feature. Jess would want to make sure that there is some good security in the case where someone might be able to get into your accounts. But Jess also thinks that it could be expanded even more if there was a way for you to connect streaming platforms to it.
 
 **Interviewer:** Carter Taylor
 
@@ -69,7 +69,7 @@ and contributions to potential features, finding that it would be most useful to
 
 **Consumer Segments:**
 
-**Key insights** Jess could see another use by having steaming platforms connected in addition to the social media accounts. 
+**Key insights** Jess could see another use by having steaming platforms connected in addition to the social media accounts.
 
 **Representative quotes** "Nice to have for instagram influencers to manage their "livelihood"
 
@@ -95,7 +95,7 @@ and contributions to potential features, finding that it would be most useful to
 
 ### Interview 5:
 
-**Summary:** Paige thought that SociAll is a good idea. She believes that their is a need for it so that it would work to make it. She thought that the app would be a matter of convenience so that it is easier to add one person on all social media. 
+**Summary:** Paige thought that SociAll is a good idea. She believes that their is a need for it so that it would work to make it. She thought that the app would be a matter of convenience so that it is easier to add one person on all social media.
 
 **Interviewer:** Max Mosier
 
@@ -103,8 +103,8 @@ and contributions to potential features, finding that it would be most useful to
 
 **When:** 2/6/2021
 
-**Consumer Segments:** 
-- Anyone with two or more social media accounts. 
+**Consumer Segments:**
+- Anyone with two or more social media accounts.
 - Employers (If there was a search for person feature).
 
 **Key insights** It would be really convenient to be able to add someone in one location instead of many. This is because you only have to add one username when a person could have different usernames for each social media.
@@ -123,7 +123,7 @@ and contributions to potential features, finding that it would be most useful to
 
 **When:** 2/6/2021
 
-**Consumer Segments:** 
+**Consumer Segments:**
 - Anyone with two or more social media accounts.
 - Employers (If there was a search for person feature).
 
@@ -137,13 +137,13 @@ and contributions to potential features, finding that it would be most useful to
 
 **Summary:** Brendan thought that the idea itself was good, but perticularly felt as though he would use the text chat portion of things for meeeting new people. He was not sure if he would sign up, but liked the idea of being able to find other people who had decided to. He encouraged us to look for more incentives to get people to sign up in the first place.
 
-**Interviewer:** Quinn Melssen 
+**Interviewer:** Quinn Melssen
 
 **Interviewee:** Brendan Mellady
 
 **When:** 2/6/2021
 
-**Consumer Segments:** 
+**Consumer Segments:**
 
 **Key insights** -Needs incentive to sign up in the first place, or functionality where you don't have to.
 
@@ -171,21 +171,21 @@ and contributions to potential features, finding that it would be most useful to
 
 ### Interview 9:
 
-**Summary:**
+**Summary:** Heather thought this was an okay idea. She said that it is a decent product if used for professional reasons, but it could lead to dangerous outcomes if it's abused. For example, for jobs, it's good because an employer can look at all social medias of an employee at ease. It can be dangerous if someone uses it to heavily stalk someone or even take someone's identity. How would a user be verified to be that person? Any person could make an account and say that they are anybody else. There should be some verification process, which can be tedious.
 
-**Interviewer:**
+**Interviewer:** Liam Scholl
 
-**Interviewee:**
+**Interviewee:** Heather Zajac
 
-**When:** 
+**When:** 02/10/2021
 
-**Consumer Segments:**
+**Consumer Segments:** Employers, Social Media Models (for publicity), anyone that has a lot of social media accounts.
 
-**Key insights**
+**Key insights** Possibly have a log of who has looked at your account, if they have an account.
 
-**Representative quotes**
+**Representative quotes** "Anyone could access all of your social media at anytime and exacerbate the internet stalking issue."
 
-**Assessment: Must have / Nice to have / Don’t care**
+**Assessment: Must have / Nice to have / Don’t care** Don't care, but thinks people would use it.
 
 ### Interview 10:
 
@@ -195,7 +195,7 @@ and contributions to potential features, finding that it would be most useful to
 
 **Interviewee:**
 
-**When:** 
+**When:**
 
 **Consumer Segments:**
 
@@ -213,7 +213,7 @@ and contributions to potential features, finding that it would be most useful to
 
 **Interviewee:**
 
-**When:** 
+**When:**
 
 **Consumer Segments:**
 
