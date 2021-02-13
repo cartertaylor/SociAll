@@ -29,12 +29,6 @@
   align-items: center;
 }
 
-/* prevents footer from covering content at bottom */
-body { 
-    padding-bottom: 70px;
- }
-
-
 .btn-color-prim{
   color:white;
   background-color: #c34271;
