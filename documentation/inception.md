@@ -226,7 +226,7 @@ and contributions to potential features, finding that it would be most useful to
 **Assessment: Must have / Nice to have / Don’t care** This application is a must have for Maureen because she regularly spends time looking for friends on different platforms.
 
 
-## 4. Final value propistion and consumer segments
+## 4. Final value propostion and consumer segments
 Final Value Proposition: SociAll is a free application that allows someone to easily add/follow someone on their social media accounts.
 
 Consumer Segments:
