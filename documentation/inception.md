@@ -191,42 +191,42 @@ and contributions to potential features, finding that it would be most useful to
 
 ### Interview 10:
 
-**Summary:**
+**Summary:** Andrew did not believe SociAll was an idea that he would make use of. His primary concern was that of security; he does not want all of his information from each platform to be readily available in any one location. He made it very clear that he would not want to use anything of the sort if it involved him storing his login credentials. If he were certain that SociAll did not store any credentials, he can understand the convenience of the concept.
 
-**Interviewer:**
+**Interviewer:** Dakota Battle
 
-**Interviewee:**
+**Interviewee:** Andrew Gonzalez
 
-**When:**
+**When:** 2/7/2021
 
 **Consumer Segments:**
 
-**Key insights**
+**Key insights:** Andrew is unwilling to store his credentials for social media platforms anywhere. He would only use the app if he didn’t have to do this.
 
-**Representative quotes**
+**Representative quotes:** “If you get hacked on this site, you get hacked on everything.”
 
-**Assessment: Must have / Nice to have / Don’t care**
+**Assessment: Must have / Nice to have / Don’t care** Andrew felt this app would be nice to have, but only under the condition that his credentials weren’t stored by it.
 
 ### Interview 11:
 
-**Summary:**
+**Summary:** Maureen expressed her frustration with finding friends on different platforms since their usernames aren’t always the same. She was very interested in being able to locate friends without asking them over and over what their usernames are on each platform.
 
-**Interviewer:**
+**Interviewer:** Dakota Battle
 
-**Interviewee:**
+**Interviewee:** Maureen Dawson
 
-**When:**
+**When:** 2/7/2021
 
 **Consumer Segments:**
 
-**Key insights**
+**Key insights:** Maureen believes that this app would save time when looking for friends and family on different platforms. This precise problem has made her reluctant to register for anymore social media platforms than she already has, and SociAll’s value would change that.
 
-**Representative quotes**
+**Representative quotes:** “I wouldn’t have to type people’s names fifteen different ways to find them on Instagram.”
 
-**Assessment: Must have / Nice to have / Don’t care**
+**Assessment: Must have / Nice to have / Don’t care** This application is a must have for Maureen because she regularly spends time looking for friends on different platforms.
 
 
-## 4. Final value propistion and consumer segments
+## 4. Final value propostion and consumer segments
 Final Value Proposition: SociAll is a free application that allows someone to easily add/follow someone on their social media accounts.
 
 Consumer Segments:
