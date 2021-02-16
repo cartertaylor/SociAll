@@ -1,27 +1,31 @@
-.footer {
-    bottom: 0;
-    width: 100%;
-    height: 60px; /* Set the fixed height of the footer here */
-    line-height: 60px; /* Vertically center the text there */
-  }
 
-.masthead {
-    padding-top: calc(2rem + 74px);
-    padding-bottom: 6rem;
-    background-color: #000000;
-  }
+.masthead 
+{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: #c34271;
+}
 
-.masthead .masthead-heading {
+.headcontainer
+{
+  padding-top: 5px;
+}
+
+.masthead .masthead-heading 
+{
     font-size: 4rem;
-    line-height: 4rem;
+    line-height: 6rem;
+    text-align: center;
   }
 
 
-.custom-divider {
+.custom-divider 
+{
     margin: 5rem 0;
 }
 
-.vertical-center {
+.vertical-center 
+{
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */
 
@@ -30,20 +34,113 @@
 }
 
 /* prevents footer from covering content at bottom */
-body { 
-    padding-bottom: 70px;
- }
-
-
-.btn-color-prim{
-  color:white;
-  background-color: #c34271;
-  border-color: #c34271;
-
- }
-
-.light-font-weight{
-  font-weight:300;
+body
+{ 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+/*Inputs*/
+input[type=text], select, textarea
+{
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #c34271;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit]
+{
+  background-color: #c34271;
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 10px 10px;
+}
+
+input[type=submit]:hover
+{
+  background-color:#212529;
+  color: white;
+}
+
+/*Form*/
+
+.formcontainer
+{
+  padding: 10px;
+  margin: auto;
+}
+
+.column
+{
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 10px;
+}
+
+textarea
+{
+  resize: none;
+  height: 170px;
+  width: 450px;
+}
+
+@media screen and (max-width: 600px)
+{
+  .column, input[type=submit]
+  {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+footer 
+{
+  background: #222;
+  color: #c34271;
+  flex: 0 0 50px;
+  margin-top: auto;
+  text-align: center;
+}
+
+footer h3 
+{
+ color: #c34271;
+  letter-spacing: 1px;
+  margin: 30px 0 20px;
+}
+
+footer .three-column 
+{
+ overflow: hidden;
+}
+
+footer .three-column li
+{
+ width: 33.3333%;
+ float: left;
+ padding: 5px 0;
+}
+
+
+footer .copyright 
+{
+  padding: 15px 0;
+  background: #333;
+  font-size: 15px;
+}
+
+footer .copyright span 
+{
+  color: #c34271;
+}
+
+
 
 
