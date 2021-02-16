@@ -48,7 +48,6 @@ input[type=text], select, textarea
   width: 100%;
   padding: 15px;
   border: 1px solid #c34271;
-  margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
 }
@@ -139,6 +138,10 @@ footer .copyright
 footer .copyright span 
 {
   color: #c34271;
+}
+
+.symbol-size{
+  padding:15px;
 }
 
 
