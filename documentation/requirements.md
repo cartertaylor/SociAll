@@ -18,11 +18,11 @@ Consumer Segment: People who use multiple social media platforms.
 
 ## 2. Stakeholders
 
-**2.1 Users**: Users - These are the people who are going to be interacting with the software in hopes of untangling their complicated social media webs.
+**2.1 Users**: These are the people who are going to be interacting with the software in hopes of untangling their complicated social media webs.
 
-**2.2 Developers**: Developers - Developers will be working with the website on a daily basis as well as any framework involved in its inception.
+**2.2 Developers**: Developers will be working with the website on a daily basis as well as any framework involved in its inception.
 
-**2.3 Competitors**: Tech Companies - Tech companies are pseudo competitors to our website, while simultaneously being the reason for its creation.
+**2.3 Tech Companies**: Tech companies are pseudo competitors to our website, while simultaneously being the reason for its creation.
 
 ## 3. Functional requirements (features)
 3.1 Users will be able to search for other users
@@ -53,7 +53,7 @@ https://gyazo.com/2b2cf8c884e80a1df6db0c4bf2e7c638
 
 ### 6.2. Use case descriptions and interface sketch
 
-(i)
+**(i)**
 Use Case: Create account
 
 Actor: User
@@ -71,7 +71,7 @@ The user will input the required information
 The website will check to see if the information is valid
 The website will populate a location in the database with the users new information
 
-Alternate Flow:
+Alternative Flow:
 The user opens up the website
 The user will go to the sign up page on the website
 The user will input the required information
@@ -81,7 +81,7 @@ The user will try a different username for their account
 The website will check to see if the information is valid
 The website will populate a location in the database with the users new information
 
-(ii)
+**(ii)**
 Use Case: Reset passwords
 
 Actor: User
@@ -100,12 +100,12 @@ User is asked for email corresponding to account
 User follows link sent to their email account to reset their password
 User is asked to sign back in
 
-Alternate Flow:
+Alternative Flow:
 User can not remember email address associated with account
 User is asked to give the phone number associated with the account instead
 User gets text and changes password via pin
 
-(iii)
+**(iii)**
 Use Case: Ban Users
 
 Actor: Administrator
@@ -123,7 +123,7 @@ The system asks for confirmation.
 The administrator confirms.
 The user is banned, blocking access to their account.
 
-Alternate Flows:
+Alternative Flows:
 The administrator opens a user profile.
 The administrator selects the “ban” option.
 The system asks for confirmation.
@@ -134,7 +134,7 @@ The administrator opens a user profile.
 The administrator selects the “ban” option.
 The system notifies the administrator that the user is already banned.
 
-(iv)
+**(iv)**
 Use Case: View any User page
 
 Actor: User
@@ -150,12 +150,12 @@ The user clicks on a username of a different profile
 The website loads the usernames user page
 The user can now view the usernames user page
 
-Alternate Flow:
+Alternative Flow:
 The user searches for a username of a different profile
 The website loads the usernames user page
 The user can now view the usernames user page
 
-(v)
+**(v)**
 Use Case: Post Update on Homepage
 
 Actor: Administrator
@@ -172,13 +172,13 @@ Administrator fills out the new post to what they want
 The administrator posts their post
 The users can see the new post
 
-Alternate Flow:
+Alternative Flow:
 The administrator sets the website to do an automatic post when the website goes down for maintenance
 The website goes down for maintenance
 The website displays the outage post
 All users can view the outage post
 
-(vi)
+**(vi)**
 Use Case: Delete account
 
 
@@ -198,14 +198,14 @@ The system asks for confirmation.
 The user confirms.
 The system deletes the user’s account
 
-Alternate Flow:
+Alternative Flow:
 The user opens their profile
 The user selects the “delete” option.
 The system asks for confirmation.
 The user cancels the account deletion in progress.
 
 
-(vii)
+**(vii)**
 Use Case: Search for Users
 
 Actor: User, Administrator
@@ -221,7 +221,7 @@ User searches for account in query box
 Accounts that they were searching for comes up
 User clicks on the account that they were looking for to bring up more information
 
-Alternate Flow:
+Alternative Flow:
 The account searched for isn’t found
 Alternate accounts that have similar names to the one searched are displayed
 User may find designated account amongst this list
