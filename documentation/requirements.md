@@ -246,3 +246,4 @@ User may find designated account amongst this list
 
 ## 8. Issue Tracker
 https://github.com/cartertaylor/SociAll/projects/1
+![](images/github_issue_tracker.png)
