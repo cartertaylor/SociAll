@@ -49,7 +49,7 @@ The MVP for SociAll is going to be a website that the user can create an account
 ## 6. Use cases
 
 ### 6.1. Use case diagram
-https://gyazo.com/2b2cf8c884e80a1df6db0c4bf2e7c638
+![](images/use_case_diagram.png)
 
 ### 6.2. Use case descriptions and interface sketch
 
