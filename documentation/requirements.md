@@ -54,7 +54,7 @@ The MVP for SociAll is going to be a website that the user can create an account
 ### 6.2. Use case descriptions and interface sketch
 
 **(i)**
-Use Case: Create account
+**Use Case**: Create account
 
 Actor: User
 
@@ -82,7 +82,7 @@ The website will check to see if the information is valid
 The website will populate a location in the database with the users new information
 
 **(ii)**
-Use Case: Reset passwords
+**Use Case**: Reset passwords
 
 Actor: User
 
@@ -106,7 +106,7 @@ User is asked to give the phone number associated with the account instead
 User gets text and changes password via pin
 
 **(iii)**
-Use Case: Ban Users
+**Use Case**: Ban Users
 
 Actor: Administrator
 
@@ -135,7 +135,7 @@ The administrator selects the “ban” option.
 The system notifies the administrator that the user is already banned.
 
 **(iv)**
-Use Case: View any User page
+**Use Case**: View any User page
 
 Actor: User
 
@@ -156,7 +156,7 @@ The website loads the usernames user page
 The user can now view the usernames user page
 
 **(v)**
-Use Case: Post Update on Homepage
+**Use Case**: Post Update on Homepage
 
 Actor: Administrator
 
@@ -179,10 +179,8 @@ The website displays the outage post
 All users can view the outage post
 
 **(vi)**
-Use Case: Delete account
+**Use Case**: Delete account
 
-
-**Alternative Flow**:
 Actor: User
 
 Description: The user deletes their account
@@ -206,7 +204,7 @@ The user cancels the account deletion in progress.
 
 
 **(vii)**
-Use Case: Search for Users
+**Use Case**: Search for Users
 
 Actor: User, Administrator
 
