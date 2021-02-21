@@ -226,20 +226,20 @@ User may find designated account amongst this list
 
 ## 7. User stories
 
-1) As a user, I want to be able to view my friends’ accounts from each platform so I don’t have to look for them over and over.
-2) As a user, I want to be able to save my login credentials so I can login with one click next time.
-3) As an administrator, I want to be able to shut down someone's account so that I can stop users from violating our terms of use.
-4) As a music maker, I want to be able to easily share my Spotify account to get more exposure.
-5) As a videogame player, I would like a way to search for other peoples gamer tags to be able to play with more people. 
-6) As a mother, I would like to have an easy way to see my children's social media accounts so I can make sure they aren’t talking to strangers.
-7) As an employer, I would like to see a potential employee's social media to see what kind of person they are.
-8) As a video game player, I would like to view other players’ accounts on other launchers so that I can see what they are playing.
-9) As a user, I want to see posts from all linked social media pages.
-10) As a user of the app, I want to be able to sign in using my fingerprint or face id so I don’t have to type my credentials every time I log in.
-11) As a user of the app, I want to be able to change my password so that I can secure my account in the event of a compromise.
-12) As a user of the app, I want to have the ability to request a password change so that I can get into my account in the event that I’m locked out.
-13) As a smartphone user, I want to be able to contact the SociAll team for support so I can report bugs with the app.
-14) As a user, I want to store my professional/non-professional accounts in one place so I can easily switch back and forth.
+1) As a user, I want to be able to view my friends’ accounts from each platform so I don’t have to look for them over and over. PRIORITY: HIGH; Time Estimate: 3 Hours
+2) As a user, I want to be able to save my login credentials so I can login with one click next time. PRIORITY: HIGH; Time Estimate: 1 Hour
+3) As an administrator, I want to be able to shut down someone's account so that I can stop users from violating our terms of use. PRIORITY: MEDIUM; Time Estimate: 2 Hours
+4) As a music maker, I want to be able to easily share my Spotify account to get more exposure. PRIORITY: LOW; Time Estimate: 5 Hours
+5) As a videogame player, I would like a way to search for other peoples gamer tags to be able to play with more people. PRIORITY: LOW; Time Estimate: 2 Hours
+6) As a mother, I would like to have an easy way to see my children's social media accounts so I can make sure they aren’t talking to strangers. PRIORITY: LOW; Time Estimate: 5 Hours
+7) As an employer, I would like to see a potential employee's social media to see what kind of person they are. PRIORITY: MEDIUM; Time Estimate: 1 Hour
+8) As a video game player, I would like to view other players’ accounts on other launchers so that I can see what they are playing. PRIORITY: LOW; Time Estimate: 5 Hours
+9) As a user, I want to see posts from all linked social media pages. PRIORITY: HIGH; Time Estimate: 10 Hours 
+10) As a user of the app, I want to be able to sign in using my fingerprint or face id so I don’t have to type my credentials every time I log in. PRIORITY: LOW; Time Estimate: 1 Hour
+11) As a user of the app, I want to be able to change my password so that I can secure my account in the event of a compromise. PRIORITY: HIGH; Time Estimate: 2 Hours
+12) As a user of the app, I want to have the ability to request a password change so that I can get into my account in the event that I’m locked out. PRIORITY: HIGH; Time Estimate: 2 Hours
+13) As a smartphone user, I want to be able to contact the SociAll team for support so I can report bugs with the app. PRIORITY: HIGH; Time Estimate: 1 Hour
+14) As a user, I want to store my professional/non-professional accounts in one place so I can easily switch back and forth. PRIORITY: MEDIUM; Time Estimate: 3 Hours
 
 
 ## 8. Issue Tracker
