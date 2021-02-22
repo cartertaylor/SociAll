@@ -82,7 +82,7 @@ The website will check to see if the information is valid
 The website will populate a location in the database with the users new information
 
 Sketch Interface:
-![](images/use_case_sketch1.png) 
+![](images/use_case_sketch1.PNG) 
 
 **(ii)**
 **Use Case**: Reset passwords
