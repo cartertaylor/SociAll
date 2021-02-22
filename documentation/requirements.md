@@ -81,6 +81,10 @@ The user will try a different username for their account
 The website will check to see if the information is valid
 The website will populate a location in the database with the users new information
 
+Sketch Interface:
+
+![](images/use_case_sketch1.PNG) 
+
 **(ii)**
 **Use Case**: Reset passwords
 
@@ -104,6 +108,10 @@ Alternative Flow:
 User can not remember email address associated with account
 User is asked to give the phone number associated with the account instead
 User gets text and changes password via pin
+
+Sketch Interface:
+
+![](images/use_case_sketch2.PNG)
 
 **(iii)**
 **Use Case**: Ban Users
@@ -134,6 +142,10 @@ The administrator opens a user profile.
 The administrator selects the “ban” option.
 The system notifies the administrator that the user is already banned.
 
+Sketch Interface:
+
+![](images/use_case_sketch3.PNG)
+
 **(iv)**
 **Use Case**: View any User page
 
@@ -154,6 +166,10 @@ Alternative Flow:
 The user searches for a username of a different profile
 The website loads the usernames user page
 The user can now view the usernames user page
+
+Sketch Interface: 
+
+![](images/use_case_sketch4.PNG)
 
 **(v)**
 **Use Case**: Post Update on Homepage
@@ -177,6 +193,10 @@ The administrator sets the website to do an automatic post when the website goes
 The website goes down for maintenance
 The website displays the outage post
 All users can view the outage post
+
+Sketch Interface:
+
+![](images/use_case_sketch5.PNG)
 
 **(vi)**
 **Use Case**: Delete account
@@ -202,6 +222,9 @@ The user selects the “delete” option.
 The system asks for confirmation.
 The user cancels the account deletion in progress.
 
+Sketch Interface:
+
+![](images/use_case_sketch6.PNG)
 
 **(vii)**
 **Use Case**: Search for Users
@@ -223,6 +246,10 @@ Alternative Flow:
 The account searched for isn’t found
 Alternate accounts that have similar names to the one searched are displayed
 User may find designated account amongst this list
+
+Sketch Interface:
+
+![](images/use_case_sketch7.PNG)
 
 ## 7. User stories
 
