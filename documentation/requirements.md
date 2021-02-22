@@ -143,6 +143,7 @@ The administrator selects the “ban” option.
 The system notifies the administrator that the user is already banned.
 
 Sketch Interface:
+
 ![](images/use_case_sketch3.PNG)
 
 **(iv)**
@@ -167,7 +168,8 @@ The website loads the usernames user page
 The user can now view the usernames user page
 
 Sketch Interface: 
-![](images/use_case_sketch4.png)
+
+![](images/use_case_sketch4.PNG)
 
 **(v)**
 **Use Case**: Post Update on Homepage
@@ -193,7 +195,8 @@ The website displays the outage post
 All users can view the outage post
 
 Sketch Interface:
-![](images/use_case_sketch5.png)
+
+![](images/use_case_sketch5.PNG)
 
 **(vi)**
 **Use Case**: Delete account
@@ -220,7 +223,8 @@ The system asks for confirmation.
 The user cancels the account deletion in progress.
 
 Sketch Interface:
-![](images/use_case_sketch6.png)
+
+![](images/use_case_sketch6.PNG)
 
 **(vii)**
 **Use Case**: Search for Users
@@ -244,7 +248,8 @@ Alternate accounts that have similar names to the one searched are displayed
 User may find designated account amongst this list
 
 Sketch Interface:
-![](images/use_case_sketch7.png)
+
+![](images/use_case_sketch7.PNG)
 
 ## 7. User stories
 
