@@ -109,6 +109,7 @@ User is asked to give the phone number associated with the account instead
 User gets text and changes password via pin
 
 Sketch Interface:
+
 ![](images/use_case_sketch2.png)
 
 **(iii)**
