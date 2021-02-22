@@ -82,6 +82,7 @@ The website will check to see if the information is valid
 The website will populate a location in the database with the users new information
 
 Sketch Interface:
+
 ![](images/use_case_sketch1.PNG) 
 
 **(ii)**
@@ -110,7 +111,7 @@ User gets text and changes password via pin
 
 Sketch Interface:
 
-![](images/use_case_sketch2.png)
+![](images/use_case_sketch2.PNG)
 
 **(iii)**
 **Use Case**: Ban Users
@@ -142,7 +143,7 @@ The administrator selects the “ban” option.
 The system notifies the administrator that the user is already banned.
 
 Sketch Interface:
-![](images/use_case_sketch3.png)
+![](images/use_case_sketch3.PNG)
 
 **(iv)**
 **Use Case**: View any User page
