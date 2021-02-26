@@ -8,7 +8,7 @@ SociAll **users** will be able to access our website from any internet enabled d
 
 
 ## 2. Model
-![](images/deliverable3_uml.png)
+![](images/analysis_uml.png)
 
 
 
