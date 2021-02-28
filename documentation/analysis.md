@@ -1,5 +1,11 @@
 # Analysis
 
+*Group 05 - "[SociAll]"*
+
+*Date and location: February 25, 2021*
+
+*Group Members: Carter Taylor, Ethan Baranowski, Dakota Battle, Liam Scholl, Max Mosier, Quinn Melssen, William Fuertes*
+
 ## 1. System description
 Over the last decade social media has exploded, and what was once a landscape that was dominated by a single company has become a warzone with tens of services all vying for space in our computers and minds. SociAll is a keychain designed to combat this phenomenon by giving users the ability to manage multiple accounts from one centralized hub. 
 
