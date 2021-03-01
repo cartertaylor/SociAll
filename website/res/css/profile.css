@@ -1,0 +1,24 @@
+.img-max {
+    max-width: 300px;
+    max-height: 250px;
+    width:100%;
+  }
+
+  .icon-max {
+      width: 48px;
+  }
+
+  .center-block {
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .largeSpacing{
+   margin-top: 5rem;
+ }
+
+ .largeSpacingBottom{
+   margin-bottom: 5rem;
+ }
