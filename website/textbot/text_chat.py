@@ -14,8 +14,8 @@ client = Client(account_sid, auth_token)
 # Flask webapp setup
 app = Flask(__name__)
 
-@app.route('/textbot')
-def hello_world():
+@app.route('/textbot', methods = ['POST']))
+def textbot():
     return 'Test'
 
 if __name__ == "__main__":
