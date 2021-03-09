@@ -1,4 +1,4 @@
-# imports
+# import
 from flask import Flask, request
 import requests
 from twilio.rest import Client
