@@ -1,22 +1,40 @@
-# import
+#imports
 from flask import Flask, request
 import requests
-from twilio.rest import Client
 from twilio.twiml.messaging_response import MessagingResponse
 
-# twilio acc info
-account_sid = "AC16136c6a424ad7503d7df3a3bdb2a422"
-auth_token = "9a037326814f2b00f9ede3e76d2792a2"
-account_num = "+13852360797"
-
-client = Client(account_sid, auth_token)
-
-# Flask webapp setup
 app = Flask(__name__)
 
-@app.route('/textbot', methods = ['POST']))
-def textbot():
-    return 'Test'
+# check for post request to /bot filepath
+@app.route('/bot', methods=['POST'])
+def bot():
+    # parse incoming message for username
+    incoming_msg = request.values.get('Body', '').lower()
+    resp = MessagingResponse()
+    msg = resp.message()
+    responded = False
+    # check to see if username is in database
+    if 'qmelsociall' in incoming_msg:
+        # return info
+        info = ("SociAll Presents: Quinn Melssen!\n"
+                "Instagram: QmelInsta\n"
+                "Facebook: QmelFace\n"
+                "LinkedIn: QmelUnemployed")
 
-if __name__ == "__main__":
-	app.run(debug = True)
+        msg.body(info)
+        responded = True
+
+    # standardized output if user not found in database
+    if not responded:
+        msg.body("Sorry, that user hasn't registered with us yet! Tell them to sign up!")
+
+    return str(resp)
+
+
+if __name__ == '__main__':
+    app.run()
+
+
+# to start venv use '/bin/activate'
+# to start file use 'python text_chat.py'
+# to expose port to internet use 'gunicorn -b :5000 text_chat:app'
