@@ -26,7 +26,7 @@ def bot():
 
     # standardized output if user not found in database
     if not responded:
-        msg.body("Sorry, that user hasn't registered with us yet! Tell them to sign up!")
+        msg.body("Sorry, that user hasn't registered with us yet! Tell them to sign up at http://sociall.live/otherPages/sign-up-page.html!")
 
     return str(resp)
 
