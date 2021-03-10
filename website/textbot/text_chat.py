@@ -35,6 +35,5 @@ if __name__ == '__main__':
     app.run()
 
 
-# to start venv use '/bin/activate'
 # to start file use 'python text_chat.py'
 # to expose port to internet use 'gunicorn -b :5000 text_chat:app'
