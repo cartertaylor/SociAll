@@ -11,6 +11,9 @@
         <!-- Created CSS -->
         <link rel="stylesheet" type="text/css" href="landingPage.css">
 
+        <!-- Linking js to test page -->
+        <script src="signup.js"></script>
+      
 
         <!-- Will add a required script tag for JS at a future date -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -19,6 +22,7 @@
 
         <!-- Modal Code (pop up from log in button)-->
         <script>$('#myModal').modal(options)</script>
+
 
         <title>SociAll</title>
     </head>
@@ -67,7 +71,7 @@
             <!-- First Name Row -->
             <div class="col-md-6  mb-3">
               <label for="validationDefault01">First name</label>
-              <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="" required>
+              <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="JAR JAR" required>
             </div>
 
             <!-- Last Name Row-->
@@ -111,7 +115,7 @@
           </div>
 
           <div class = "text-center">
-            <button class="btn btn-color-prim text" type="submit">Create Account</button>
+            <button class="btn btn-color-prim tex" onClick= "createAccount()">Create Account</button>
           </div>
         </form>
 
@@ -119,23 +123,9 @@
 
 
       <!-- Footer -->
-      <footer>
+      <footer class = "footer bg-dark fixed-bottom">
         <div class="container">
-          <div class="row">
-
-            <div class="footername">
-              <h3>SociAll</h3>
-              <ul class="list-unstyled three-column">
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-        <div class="copyright text-center">
-          Copyright &copy; 2021 <span>SociAll</span>
+          <span class="text-muted">SociAll</span>
         </div>
       </footer>
 
