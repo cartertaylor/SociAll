@@ -79,30 +79,8 @@ console.log(query.sql);
 //   console.log(results);
 // });
 
-carter = "carter"
-
-  // object to be sent in post request
-  const signInInfo = {carter};
-
-  // contains information regarding the type of fetch request we are doing
-  const options = {
-    method: 'POST', // type of data 
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body:JSON.stringify(signInInfo) // the actual info passed into the post request
-  }
-
-  // actual fetch (post) request (sends the data over)
-    // response is what is sent back (we can configure this in server.js)
-  fetch('../signup', options).then (response=> {
-    console.log(response.json());
-  });
-
-
 // connection.end();
 
-console.log("yo");
 function createAccount()
 {
 /*
@@ -116,13 +94,14 @@ function createAccount()
   connection.connect();
 */
 
-  var firstName = document.getElementById("validationDefault01").value + "";
-  var last_name = document.getElementById("validationDefault02").value;
+  let firstName = document.getElementById("validateFirstName").value + "";
+  let lastName = document.getElementById("validateLastName").value;
+  let phoneNumber = document.getElementById("validatePhoneNumber").value;
+  let email = document.getElementById("validateEmail").value;
+  let userName = document.getElementById("validationDefaultUsername").value;
 
-  console.log(firstName);
-
-  // object to be sent in post request
-  const signInInfo = {firstName};
+  // create object to be sent in post request
+  const signInInfo = {firstName, lastName, phoneNumber, email, userName};
 
   console.log(signInInfo)
 
@@ -137,7 +116,8 @@ function createAccount()
   
   console.log(signInInfo);
 
-  // actual fetch (post) request
+  // actual fetch (post) request (sends the data over)
+    // response is what is sent back (we can configure this in server.js)
   fetch('../signup', options).then (response=> {
     console.log(response.json());
   });
