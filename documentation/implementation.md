@@ -72,10 +72,10 @@ If you want to look at all the things we have here is the done tab:
 https://github.com/cartertaylor/SociAll/projects/1#column-12678690
 
 ## 3. Adopted Technologies
-a. Node - Node JS a backendend JavaScript runtime library to create scalable network applications. We use it as the backend in order to server our website and communicate the front end of our site with our back end.
-b. Flask - Flask is the most popular framework for serving python code as web applications. This technology is pertinent for our project as the code for our text bot logic is written in python, and Flask process HTTP requests for the web application, performs the logic, and sends the resulting message to the users.
-c. Gunicorn - Gunicorn is a web application deployment software that our project uses to deploy our texting bot web app. It is popularly used in production environments such as ours.
-d. Mysql - Node JS module and is a connector that allows you to create databases and tables using sql. We use this as part of the backend of our site in order to store accounts from the client side of our site. 
+a. Node - Node JS a backendend JavaScript runtime library to create scalable network applications. We use it as the backend in order to server our website and communicate the front end of our site with our back end.\
+b. Flask - Flask is the most popular framework for serving python code as web applications. This technology is pertinent for our project as the code for our text bot logic is written in python, and Flask process HTTP requests for the web application, performs the logic, and sends the resulting message to the users.\
+c. Gunicorn - Gunicorn is a web application deployment software that our project uses to deploy our texting bot web app. It is popularly used in production environments such as ours.\
+d. Mysql - Node JS module and is a connector that allows you to create databases and tables using sql. We use this as part of the backend of our site in order to store accounts from the client side of our site.\
 e. Express - Express JS is a framework and web application of Node JS that gives access to functions to better communicate with our front end and move data back and forth between the two. 
 
 ## 4. Learning/training
