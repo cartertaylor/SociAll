@@ -107,6 +107,10 @@ Our markdown files on our github repository
 ## 8. Look & feel
 Our design strives to give the user an easily and upfront view of accessible accounts. The homepage of SociAll also gives a user friendly interface for login/sign up. Additionally, our color scheme is an effort to add a new look on the common “blue” many media platforms have. 
 
+![](images/implementation_look_feel_1.png)
+
+![](images/implementation_look_feel_2.png)
+
 ## 9. Lessons learned
 Our initial development cycle went well and we were able to get everyone’s environments working and were easily able to implement our code to our web server, which was also simple to set up. There was an initial struggle attempting to get the backend of the server booted up with node.js, but we all contributed to that and have more experience with the backend of a server now and it will likely not cause us any more issues in the future. 
 
