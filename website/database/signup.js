@@ -1,33 +1,32 @@
 //var mysql = require ('mysql');
 
-
-/* Function: loginBoxesValid
-   Algorithm: searches object of log in info to make sure all boxes were properly filled out
-    if not, the user will be asked to fill in the info
-   Precondition: an object of key value pairs, each key representing an input box (ex: username)
-    and each value being what was submitted in the box
-   Postcondition: True, if all boxes were filled out, False if an empty box was found 
+/* Function: checkAgreeTerms()
+   Algorithm: checks value of the terms check box element for either "" or "clicked"
+   Precondition: is called when the checkbox for agree terms is clicked
+   Postcondition: will set value of check box to either checked or empty depending 
+    on what it's last action was 
 */
-function loginBoxesValid(signInInfo)
+function checkAgreeTerms()
 {
-  // iterate over boxes
-  for (value in signInInfo)
+  // swap the element value depending on what it is currently at
+  
+  // if we checked the box, then the value is currently "", set it to "checked"
+  if (document.querySelector(".form-check-input").value === "" )
   {
-    // check for empty box 
-    if (signInInfo[value] == "")
-    {
-      return false;
-    }
+    document.querySelector(".form-check-input").value = "checked";
+  } 
 
+  // if we un-checked the box, then the value is currently "checked", set it to ""
+  else 
+  {
+    document.querySelector(".form-check-input").value = "";
   }
-
-  // otherwise no empty box was found
-  return true;
 }
 
 
 /* Function: createAccount()
-   Algorithm:  
+   Algorithm: Grabs information from form boxes. Will attempt to create account 
+    if all information is filled out and valid
    Precondition: is called when the "Create Account" button is clicked
    Postcondition: Creates user account if 
     1. All boxes are filled in 
@@ -43,13 +42,16 @@ async function createAccount()
   let lastName = document.getElementById("validateLastName").value;
   let phoneNumber = document.getElementById("validatePhoneNumber").value;
   let email = document.getElementById("validateEmail").value;
-  
+
+  // grab the current value of the terms button on the site (will be either "" or "checked")
+  let agreeTerms = document.querySelector(".form-check-input").value;
 
   // create object to be sent in post request
   const signInInfo = {firstName, lastName, phoneNumber, email, userName};
-    
-  // check for all boxes filled in for sign up 
-  if (loginBoxesValid(signInInfo))
+
+  // check for all boxes filled in for sign up, including check box for terms 
+    // function: loginBoxesValid
+  if (loginBoxesValid(signInInfo) && agreeTerms == "checked")
   {
     
     // contains information regarding the type of fetch request we are doing
@@ -91,6 +93,29 @@ async function createAccount()
 
 }
 
+
+/* Function: loginBoxesValid
+   Algorithm: searches object of log in info to make sure all boxes were properly filled out
+    if not, the user will be asked to fill in the info
+   Precondition: an object of key value pairs, each key representing an input box (ex: username)
+    and each value being what was submitted in the box
+   Postcondition: True, if all boxes were filled out, False if an empty box was found 
+*/
+function loginBoxesValid(signInInfo)
+{
+  // iterate over boxes
+  for (value in signInInfo)
+  {
+    // check for empty box 
+    if (signInInfo[value] == "")
+    {
+      return false;
+    }
+  }
+
+  // otherwise no empty box was found
+  return true;
+}
 
 
 //window.alert("this is working!")
