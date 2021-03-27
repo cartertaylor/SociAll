@@ -13,11 +13,30 @@ function grabSearchVal(event)
     updateSearch("dog");
 
     // call post function with current value 
+    checkForUser();
 }
 
-
 // fetch existing users (post request)
+function checkForUser()
+{
 
+    testData1 = "first guy"
+    testData = {testData1};
+
+  // contains information regarding the type of fetch request we are doing
+  const options = {
+    method: 'POST', // type of data 
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body:JSON.stringify(testData1) // the actual location(info) passed into the post request
+  }
+
+
+  const response = await fetch('/usersearch', options) 
+  const responseData = await response.json();
+  console.log(responseData);
+  console.log(responseData.databaseResponse);
   // store response
 
   // convert respons to array of data 
@@ -25,7 +44,7 @@ function grabSearchVal(event)
   // update availableUsers to now be what was returned 
     // function: updateSearch
 
-
+}
 
 
 // initial run of the autocomplete function
