@@ -31,6 +31,9 @@ Our class diagram details the important functionality used by our system, and th
 
 4. **Sequence diagram:**
 
+![image](https://user-images.githubusercontent.com/78051759/112768247-041e5b80-8fd0-11eb-80e7-d16a68a2affc.png)
+
+
 - **Use Case** : Create account
 - **Actor** : User
 - **Description** : The user will be able to input unique information to create an account with the SociAll website
