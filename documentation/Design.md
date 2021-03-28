@@ -10,25 +10,26 @@ Over the last decade social media has exploded, and what was once a landscape th
 
 SociAll **users** will be able to access our website from any internet enabled device. Upon creating an account they will be able to sign up and become a **user** of the site. From there they are able to _customize_ their _ **profiles** _, as well as _search_for other users _ **profiles.** _ On the other **users profiles** are their **SocialMedia** accounts and a _description_of the **user&#39;s** choosing. As the **users** browse they will also have the opportunity to _follow_ other users and _message_them via the **messenger** if they would like. **Users** will also be able to _text_ our **textBot** a different **user&#39;s profile** _name_ and receive a list back of their **Social Media** accounts.
 
-1. **Architecture:**
+2. **Architecture:**
 _Full resolution:_[https://drive.google.com/file/d/173wfewnJypKiVUZzuhSPochB8pRmT4Ys/view?usp=sharing](https://drive.google.com/file/d/173wfewnJypKiVUZzuhSPochB8pRmT4Ys/view?usp=sharing)
 Our system consists of two main layers being our client side and our server side. The client side is visible to the user, and is the main mode of interaction to send data to and `from the client and server. A sub layer of the main client we included is called HTML which just basically represents the interactive part of the website that kicks all the other parts into motion. For example, creating an account will have our client javascript process the information from the user, then send them off to our other main layer called server. Server has two sub layers called requests and database. Requests handles the data sent over from the client, and then attempts to store the info into our database layer. Which will send back the result of the storage (failure or success) back to the client where our client code can notify the user.
 
- ![](RackMultipart20210328-4-16wybs5_html_ed62f295eea462bb.png)
+ ![image](https://user-images.githubusercontent.com/78051759/112764259-8ac93d80-8fbc-11eb-9952-603605a0884c.png)
 
 
 
 
 
 
-2. **Class diagram:**
+
+3. **Class diagram:**
 
 Our class diagram details the important functionality used by our system, and the reliance some functions have on others.
 
- ![](RackMultipart20210328-4-16wybs5_html_11b0612d843b567d.png)
+![image](https://user-images.githubusercontent.com/78051759/112764267-987ec300-8fbc-11eb-9a0a-7b7cfc093f31.png)
 
 
-3. **Sequence diagram:**
+4. **Sequence diagram:**
 
 - **Use Case** : Create account
 - **Actor** : User
@@ -51,17 +52,17 @@ Our class diagram details the important functionality used by our system, and th
   - The website will check to see if the information is valid
   - The website will populate a location in the database with the users new information
 
-1. **Design Patterns:**
+5. **Design Patterns:**
 
 **Adapter Design Pattern**
 
-![](RackMultipart20210328-4-16wybs5_html_fbc4d97d4d1a7d13.png)
+![image](https://user-images.githubusercontent.com/78051759/112764284-acc2c000-8fbc-11eb-8ea7-bcce1ec8fc7b.png)
 
 **Observer Design Pattern**
 
-![](RackMultipart20210328-4-16wybs5_html_ed7636a4d05ed977.png)
+![image](https://user-images.githubusercontent.com/78051759/112764291-b2200a80-8fbc-11eb-86b1-309f512aadf2.png)
 
-1. **Design Principles:**
+6. **Design Principles:**
 
 Single-responsibility Principle: The principle states that a class should really only have one job, or one responsibility, hence the name. The user classes only have one job (or responsibility), and that is to hold user information and can be passed anywhere that a user&#39;s information needs to go.
 
