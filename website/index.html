@@ -32,7 +32,8 @@
 
        <!--interal JS file-->
       <script src="/res/js/homepage.js"></script>
-      
+       <!-- <script src="/otherPages/profile.js"></script> -->
+
         <!-- Modal Code (pop up from log in button)-->
         <script>$('#myModal').modal(options)</script>
 
@@ -47,7 +48,7 @@
       <!-- Having different containers for differnet sections of the page -->
 
       <!-- Nav Bar-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top ">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark top ">
         <div class = "container-fluid">
           <a class = "navbar-brand" href = "#"><img src = "res/images/TempLogo.png" height = "50" width = "50"></a>
           <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarResponsive">
@@ -57,7 +58,7 @@
           <div class="input-group">
             <input type="search" id = "searcher" onInput="grabSearchVal(event)" class=" rounded" placeholder="Search" aria-label="Search"
               aria-describedby="search-addon" style="width: 20rem;" />
-            <button type="button" class="btn btn-color-prim btn-outline-danger" onclick="location.href='http://sociall.live/otherPages/user-profile'">search</button>
+            <button type="button" class="btn btn-color-prim btn-outline-danger" onclick= "getUser(event)">search</button>
           </div>
           
           <div class = "collapse navbar-collapse " id = "navbarResponsive">
@@ -72,10 +73,10 @@
                 <a class = "nav-link text-white" href = "http://sociall.live">Home</a>
               </li>
               <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "http://sociall.live/otherPages/about-us">About Us</a>
+                <a class = "nav-link text-white" href = "http://sociall.live/otherPages/about-us.html">About Us</a>
               </li>
               <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "http://sociall.live/otherPages/contact">Contact Us</a>
+                <a class = "nav-link text-white" href = "http://sociall.live/otherPages/contact.html">Contact Us</a>
               </li>
             </ul>
     
