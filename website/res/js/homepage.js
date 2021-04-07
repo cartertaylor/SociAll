@@ -2,6 +2,35 @@
 var availableUsers = [];
 
 
+// function needs work.
+ // UPON search click, takes username entered and will search for their profile
+ // page will generate dynamic page given the users data stored within database  
+async function getUser(event)
+{
+  // searched
+    // grab current user within search bar 
+    currentSearchUser = (document.getElementById("searcher").value);
+    
+    testObject = {searchData: currentSearchUser};
+
+    // post request
+    // contains information regarding the type of fetch request we are doing
+    // const options = {
+    //   method: 'POST', // way we want data sent
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body:JSON.stringify(testObject) // the actual location(info) passed into the post request
+    // }
+
+    // const response = await fetch('../searched', options) 
+    // const responseData = await response.json();
+    // console.log(responseData);
+
+    document.location.href= 'user/' + currentSearchUser;
+    
+} 
+
 // on keyup, call post request function with the current letter 
 function grabSearchVal(event)
 {
@@ -50,7 +79,6 @@ async function checkForUser(availableLetters)
   }
 
 }
-
 
 function convertToArray(jsonObject)
 {
