@@ -1,0 +1,1 @@
+this folder. belongs outside the public folder of the site. 
