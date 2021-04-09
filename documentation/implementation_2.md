@@ -29,7 +29,7 @@ https://github.com/cartertaylor/SociAll/pull/82 \
 Who Implemented Feature: Quinn Melssen\
 Who Reviewed/Approved Feature: Carter Taylor\
 Screenshot Of Feature:\
-![](./images/textbot_implementation.png)
+<img src="./images/textbot_implementation.png" width=500>
 
 ## 3. Demo
 Demo of the website: https://drive.google.com/file/d/1u_jKXCW0XHOrXH-BxuKGqRm-42ux-AnP/view?usp=sharing \
