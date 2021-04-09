@@ -1,0 +1,151 @@
+body
+{
+    background: linear-gradient(-45deg, #31d898, #48f5b2, #1fffe1, #51f3cd);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+  
+@keyframes gradient 
+{
+    0% 
+    {
+      background-position: 0% 50%;
+    }
+    50% 
+    {
+      background-position: 100% 50%;
+    }
+    100% 
+    {
+      background-position: 0% 50%;
+    }
+}
+
+
+
+.subheading
+{
+  padding: 50px;
+  font-size: 50px;
+  font-weight: bolder;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: url("https://raw.githubusercontent.com/WebDevSimplified/css-challenges/master/Animated%20Text%20Reveal/reveal_background.jpg");
+  background-repeat: repeat-x;
+  animation: reveal-background 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) 
+{
+  .reveal-text 
+  {
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-image: url("https://raw.githubusercontent.com/WebDevSimplified/css-challenges/master/Animated%20Text%20Reveal/reveal_background.jpg");
+      background-repeat: repeat-x;
+      animation: reveal-background 2s ease-in-out infinite;
+      animation-fill-mode: forwards;
+  }
+
+  .reveal-next-text
+  {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url("https://raw.githubusercontent.com/WebDevSimplified/css-challenges/master/Animated%20Text%20Reveal/reveal_background.jpg");
+    background-repeat: repeat-y;
+    animation: reveal-next-background 1s ease-in-out infinite;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes reveal-background
+{
+  0%{
+    background-size: 0px;
+    background-position-y: 0%;
+  }
+  10%{
+    background-size: 30px;
+    background-position-y: 0%;
+  }
+  35%, 45%{
+    background-position-y: 100%;
+  }
+  70%{
+    background-size: 30px;
+    background-position-y: 0%;
+  }
+  100%{
+    background-size: 200px;
+  }
+}
+
+@keyframes reveal-next-background
+{
+  0%{
+    background-size: 0px;
+    background-position-x: 0%;
+  }
+  10%{
+    background-size: 200px;
+    background-position-x: 0%;
+  }
+  35%, 45%{
+    background-position-x: 100%;
+  }
+  70%{
+    background-size: 200px;
+    background-position-x: 0%;
+  }
+  100%{
+    background-size: 1000px;
+  }
+}
+
+.landing-description
+{
+  position: relative;
+  padding: 15px;
+  width: 50%;
+  font-size: 100px;
+  font-weight: bolder;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: url("https://raw.githubusercontent.com/WebDevSimplified/css-challenges/master/Animated%20Text%20Reveal/reveal_background.jpg");
+  background-repeat: repeat-y;
+  animation: reveal-next-background 1s ease-in-out;
+  animation-fill-mode: forwards;
+  line-height: 50%;
+  
+
+}
+
+
+
+html {
+    box-sizing: border-box;
+  }
+  *,*::before,*::after {
+    box-sizing: inherit;
+  }
+  body {
+    margin: 0;
+  }
+  .wave-container {
+    position: relative;
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+  }
+  .wave-container > svg {
+    display: block;
+  }
+
+
+
+  

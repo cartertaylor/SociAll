@@ -1,0 +1,9 @@
+.nav-links-btn {
+    background-color: var(--lightgreen);
+    padding: 2px 16px;
+    border-radius: 4px;
+}
+.nav-links {
+    color: white;
+    text-decoration: none;
+}
