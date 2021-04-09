@@ -12,6 +12,10 @@
         <link rel="stylesheet" type="text/css" href="../res/css/contact.css">
         <link rel="stylesheet" type="text/css" href="../res/css/landingPage.css">
 
+        <!-- Linking js to test page -->
+        <script src="../res/js/signup.js"></script>
+      
+
         <!-- Will add a required script tag for JS at a future date -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
@@ -20,6 +24,7 @@
         <!-- Modal Code (pop up from log in button)-->
         <script>$('#myModal').modal(options)</script>
 
+
         <title>SociAll</title>
     </head>
 
@@ -27,7 +32,7 @@
 
     <body>
       <!-- Nav Bar-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top ">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top mb-4">
         <div class = "container-fluid">
           <a class = "navbar-brand" href = "#"><img src = "../res/images/TempLogo.png" height = "50" width = "50"></a>
           <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarResponsive">
@@ -36,13 +41,13 @@
           <div class = "collapse navbar-collapse " id = "navbarResponsive">
             <ul class = "navbar-nav ms-auto">
               <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "http://sociall.live">Home</a>
+                <a class = "nav-link text-white" href = "../index.html">Home</a>
               </li>
               <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "http://sociall.live/otherPages/about-us">About Us</a>
+                <a class = "nav-link text-white" href = "#">About Us</a>
               </li>
               <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "http://sociall.live/otherPages/contact">Contact Us</a>
+                <a class = "nav-link text-white" href = "#">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -51,9 +56,9 @@
 
       <!--Header Before sign up form-->
       <h1 class = "text-center mt-1 mb-4">Create your SociAll account</h1>
-      <p class="light-font-weight text-center mb-0">One account for your social media. Find and engage with your friends with the tap of a button. </p>
+      <p class="light-font-weight text-center mb-4">One account for your social media. Find and engage with your friends with the tap of a button. </p>
 
-      <div class = "container d-flex justify-content-center mb-2" >
+      <div class = "container d-flex justify-content-center" >
         <p class = "light-font-weight">Already have an Account?
           <a class = "" href = "../index.html"> Log in</a>
         </p>
@@ -67,25 +72,25 @@
             <!-- First Name Row -->
             <div class="col-md-6  mb-3">
               <label for="validationDefault01">First name</label>
-              <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="" required>
+              <input type="text" class="form-control" id="validateFirstName" placeholder="First name" value="JAR JAR" required>
             </div>
 
             <!-- Last Name Row-->
             <div class="col-md-6 mb-3">
               <label for="validationDefault02">Last name</label>
-              <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="" required>
+              <input type="text" class="form-control" id="validateLastName" placeholder="Last name" value="" required>
             </div>
 
             <!-- Phone Number Row-->
             <div class="col-md-6 offset-md-3 mb-3">
               <label for="validationDefault04">Phone Number</label>
-              <input type="text" class="form-control" id="validationDefault04" placeholder="Phone Number" required>
+              <input type="text" class="form-control" id="validatePhoneNumber" placeholder="Phone Number" required>
             </div>
 
             <!-- Email Row-->
             <div class="col-md-6 offset-md-3 mb-3">
               <label for="validationDefault03">Email</label>
-              <input type="text" class="form-control" id="validationDefault03" placeholder="Email" required>
+              <input type="text" class="form-control" id="validateEmail" placeholder="Email" required>
             </div>
 
             <!-- User Name Row-->
@@ -93,7 +98,7 @@
               <label for="validationDefaultUsername">Username</label>
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <div class="input-group-text symbol-size" id="inputGroupPrepend2">@</div>
+                  <span class="input-group-text" id="inputGroupPrepend2">@</span>
                 </div>
                 <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required>
               </div>
@@ -103,7 +108,7 @@
           <!-- Agree Checkmark and Sign up button-->
           <div class="form-group text d-flex justify-content-center">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+              <input class="form-check-input" type="checkbox" value="" onClick= "checkAgreeTerms()" id="invalidCheck2" required>
               <label class="form-check-label" for="invalidCheck2">
                 Agree to terms and conditions
               </label>
@@ -111,7 +116,7 @@
           </div>
 
           <div class = "text-center">
-            <button class="btn btn-color-prim mb-4" type="submit">Create Account</button>
+            <button type="button" class="btn btn-color-prim tex" onClick= "createAccount()">Create Account</button>
           </div>
         </form>
 
@@ -119,26 +124,11 @@
 
 
       <!-- Footer -->
-      <footer>
+      <footer class = "footer bg-dark fixed-bottom">
         <div class="container">
-          <div class="row">
-
-            <div class="footername">
-              <h3>SociAll</h3>
-              <ul class="list-unstyled three-column">
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-        <div class="copyright text-center">
-          Copyright &copy; 2021 <span>SociAll</span>
+          <span class="text-muted">SociAll</span>
         </div>
       </footer>
-
 
     </body>
 </html>
