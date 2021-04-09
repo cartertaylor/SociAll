@@ -42,12 +42,15 @@ async function createAccount()
   let lastName = document.getElementById("validateLastName").value;
   let phoneNumber = document.getElementById("validatePhoneNumber").value;
   let email = document.getElementById("validateEmail").value;
+  let password = document.getElementById("validatePassword").value;
+
+ 
 
   // grab the current value of the terms button on the site (will be either "" or "checked")
   let agreeTerms = document.querySelector(".form-check-input").value;
 
   // create object to be sent in post request
-  const signInInfo = {firstName, lastName, phoneNumber, email, userName};
+  const signInInfo = {firstName, lastName, phoneNumber, email, userName, password};
 
   // check for all boxes filled in for sign up, including check box for terms 
     // function: loginBoxesValid
