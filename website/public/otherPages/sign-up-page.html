@@ -90,7 +90,7 @@
             <!-- Email Row-->
             <div class="col-md-6 offset-md-3 mb-3">
               <label for="validationDefault03">Email</label>
-              <input type="text" class="form-control" id="validateEmail" placeholder="Email" required>
+              <input type="email" class="form-control" id="validateEmail" placeholder="Email" required>
             </div>
 
             <!-- User Name Row-->
@@ -105,6 +105,12 @@
             </div>
           </div>
 
+          <!-- Password Row-->
+          <div class="col-md-6 offset-md-3 mb-3">
+            <label for="validationDefaultPassword">Password</label>
+            <input type="password" class="form-control" id="validatePassword" placeholder="Password" required>
+          </div>
+
           <!-- Agree Checkmark and Sign up button-->
           <div class="form-group text d-flex justify-content-center">
             <div class="form-check">
@@ -116,7 +122,7 @@
           </div>
 
           <div class = "text-center">
-            <button type="button" class="btn btn-color-prim tex" onClick= "createAccount()">Create Account</button>
+            <button class="btn btn-color-prim tex" onClick= "createAccount()">Create Account</button>
           </div>
         </form>
 
