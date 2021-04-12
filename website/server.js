@@ -2,9 +2,31 @@
 const express = require('express');
 const mysql = require ('mysql');
 const bcrypt = require ('bcryptjs');
-var hbs = require('express-handlebars');
-var path = require('path');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+var logger = require('morgan');
 require('dotenv').config()
+
+
+var hbs = require('express-handlebars');
+
+// helps with safe user authentication
+const passport = require('passport')
+
+// reaches out to our passport code (in another file)
+const initializePassport = (require('./passport-config'));
+initializePassport(passport);
+
+
+// express session stuff
+const expressValidator = require('express-validator');
+const expressSession = require('express-session');
+
+// passes messages and errors to pages
+const flash = require("express-flash");
+
+// default routes (will begin to transfer 'posts' and 'gets' here soon )
+const indexRouter = require('./routes/home');
 
 // contains all supporter functions of express
 const app = express();
@@ -15,19 +37,12 @@ app.listen(3000, ()=> console.log("server listening on port 3000") );
 // servers static files from any files within 'public'
 app.use(express.static('public'));
 
-// grab env variables for secrecy (spooky)
-const databaseHost = process.env.DATABASE_HOST_NAME;
-const databaseUser = process.env.DATABASE_USER_NAME;
-const databasePassword = process.env.DATABASE_PASSWORD ;
-const databaseName = process.env.DATABASE_NAME;
-const userTable = process.env.DATABASE_MAIN_TABLE;
 
 // gives access to process json from client 
   // middleware process to allow the json object from client to be read 
 app.use(express.json({limit: '15mb' })); // sets a max limit of the limit of what we receive
 
-// default routes (will begin to transfer 'posts' and 'gets' here soon )
-// var indexRouter = require('./routes/home');
+
 // var usersRouter = require('./routes/users');
 
 // view engine setup
@@ -35,6 +50,28 @@ app.use(express.json({limit: '15mb' })); // sets a max limit of the limit of wha
 app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts'}));
 app.set('views', path.join(__dirname, 'views')); //__dirname is root, then 'views' folder
 app.set('view engine', 'hbs'); // currently using hbs
+
+// url encoded is important
+app.use(express.urlencoded({ extended: false }));
+app.use(expressValidator());
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public'))); // where files to be found statically
+
+
+// grab env variables for secrecy (spooky)
+const databaseHost = process.env.DATABASE_HOST_NAME;
+const databaseUser = process.env.DATABASE_USER_NAME;
+const databasePassword = process.env.DATABASE_PASSWORD ;
+const databaseName = process.env.DATABASE_NAME;
+const userTable = process.env.DATABASE_MAIN_TABLE;
+const sessionSecret = process.env.SESSION_SECRET
+
+// must put it after the parsers (change secret to env variable)
+app.use(expressSession({secret:sessionSecret, saveUninitialized: false, resave: false}));
+app.use(passport.initialize());
+app.use(passport.session())
+
+app.use((flash()));
 
 
 // INITIALIZE TO DATABASE 
@@ -52,8 +89,8 @@ var connection = mysql.createConnection({
 //     console.log("Connected to database!");
 //   });
 
-// routes
-// app.use('/', indexRouter);
+// Routes
+app.use('/', indexRouter);
 
 
 // POST method route
@@ -212,7 +249,6 @@ var connection = mysql.createConnection({
   // testing some real important stuff
   app.post('/searchuser', (request, response) =>
   {
-    console.log("yo yo ")
     response.redirect('/user/' + 'dog')
   })
 
