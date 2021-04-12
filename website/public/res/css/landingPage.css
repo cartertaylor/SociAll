@@ -196,9 +196,9 @@ lord-icon
 }
 
 .btn-color-prim{
-  color:#31d898;
-  background-color: #c34271;
-  border-color: #c34271;
+  color:#f3f4f5;
+  background-color: #31d898;
+  border-color:#31d898;
 
  }
 
@@ -279,7 +279,7 @@ input[type=text], select, textarea
 {
   width: 100%;
   padding: 15px;
-  
+  border: 1px solid #31d898;
   margin-bottom: 16px;
   resize: vertical;
 }
@@ -288,7 +288,7 @@ input[type=password], select, textarea
 {
   width: 100%;
   padding: 15px;
-  
+  border: 1px solid #31d898;
   margin-bottom: 16px;
   resize: vertical;
 }
@@ -297,7 +297,7 @@ input[type=email], select, textarea
 {
   width: 100%;
   padding: 15px;
-  
+  border: 1px solid #31d898;
   margin-bottom: 16px;
   resize: vertical;
 }
