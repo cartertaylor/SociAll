@@ -124,7 +124,6 @@
       </div>
 
 
-
       <!-- Button trigger modal -->
       <div class = "second-main-section">
         <div class="login-text-container">
@@ -132,10 +131,16 @@
             Login or Create Account Here
           </div>
         </div>
-        <button type="button" class="login-button" data-toggle="modal" data-target="#exampleModalCenter">
-            Log In
-        </button>
-
+        
+        {{# if modalError}}
+            <button type="button" class="login-button" data-toggle="modal" data-target="#myModal">
+                Log In
+            </button>
+        {{else}}
+            <button type="button" class="login-button" data-toggle="modal" data-target="#exampleModalCenter">
+                Log In
+            </button>
+        {{/if}}
         
           <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
             <lord-icon
@@ -150,8 +155,6 @@
         </div>
               
 
-    
-        
       <!-- Modal -->
     {{# if modalError}}
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -182,7 +185,7 @@
                     <div class="form-group">
                         <label for="login-email">Username</label>
                         <input type="text" name="username" class="form-control" id="login-email" aria-describedby="emailHelp" placeholder="Enter Username">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your information with anyone else.</small>
                         </div>
                         <div class="form-group">
                         <label for="login-password">Password</label>

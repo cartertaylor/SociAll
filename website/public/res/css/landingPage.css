@@ -285,6 +285,24 @@ input[type=text], select, textarea
   resize: vertical;
 }
 
+input[type=password], select, textarea
+{
+  width: 100%;
+  padding: 15px;
+  
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=email], select, textarea
+{
+  width: 100%;
+  padding: 15px;
+  
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
 input[type=submit]
 {
   background-color: #31d898;

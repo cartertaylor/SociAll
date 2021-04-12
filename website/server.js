@@ -249,7 +249,6 @@ app.use('/', indexRouter);
   // testing some real important stuff
   app.post('/searchuser', (request, response) =>
   {
-    console.log("yo yo ")
     response.redirect('/user/' + 'dog')
   })
 

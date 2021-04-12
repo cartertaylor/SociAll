@@ -18,15 +18,13 @@ var connection = mysql.createConnection({
 }, 'pool');
 
 // TEST CONNECTION
-connection.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected to database!");
-});
+// connection.connect(function(err) {
+//   if (err) throw err;
+//   console.log("Connected to database!");
+// });
 
 
-
-
-
+// handles passport and authentication of user
 function initialize(passport)
 {
  
@@ -42,16 +40,15 @@ function initialize(passport)
 
             // Looking for an existing username 
             sql = mysql.format ("SELECT userName FROM ?? WHERE userName like ?", [userTable, username]);
-
+            // checking database for username
             connection.query (
-              sql, function (err, result, fields)
+              sql, function (err, result)
               {
                   if (err) throw err;
 
                   // check if our query was able to find a user
                   if (result[0].userName === username)
                   {
-                    console.log("found user!")
                     
                     // if so, set the found flag
                     foundUsername = true;
@@ -68,9 +65,10 @@ function initialize(passport)
 
             // look for existing password
             sql = mysql.format ("SELECT password FROM ?? WHERE userName = ?", [userTable, username]);
-
+            
+            // checking database for password
             connection.query (
-              sql, function (err, result, fields)
+              sql, function (err, result)
               {
                   if (err) throw err;
                   
@@ -91,8 +89,8 @@ function initialize(passport)
       
       
             // otherewise we validated the user
-              // maybe use result.inserID from query of user, which could make username
-              // an object with an id next to it 
+              // maybe use result.insertID from query of user, which could make username
+              // an object with an id next to it (sql insertID)
             return authCheckDone(null, username);
           }
         
@@ -101,14 +99,13 @@ function initialize(passport)
       // allows you to persist data accross session
       passport.serializeUser((user, done) =>
         {
-          console.log("user provided: " + user._id);
+          // to give user an id, you have to generate / select it in the above part (check line 91ish)
           done(null, user);
         }
       );
       
       passport.deserializeUser((id, done)=> 
         {
-          console.log("id provided: " + id);
           done(null,{id});
         }
       );

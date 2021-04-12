@@ -1,0 +1,7 @@
+<h1> This is a test for the account page of a logged in user named: {{ name }}</h1>
+<P>my name is {{ name }}</P>
+<p>this page is only accessible to someone logged in as {{name}} </p>
+<form action ="/logout?_method=DELETE" method = "POST">
+
+    <button type = "submit">Log out</button>
+</form>
