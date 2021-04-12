@@ -20,6 +20,7 @@ def searchDatabase(UserSearchingFor):
     DATABASE = os.getenv('DATABASE_NAME')
     USER = os.getenv('DATABASE_USER_NAME')
     PASSWORD = os.getenv('DATABASE_PASSWORD')
+    TABLE = os.getenv('DATABASE_MAIN_TABLE')
 
     # ESTABLISH CONNECTION
     db_connection = mysql.connect(host = HOST, database = DATABASE, user = USER, password = PASSWORD)
@@ -29,7 +30,7 @@ def searchDatabase(UserSearchingFor):
     cursor = db_connection.cursor()
 
     # PREPARE QUERY TO BE EXECUTED
-    sql = "SELECT * FROM test_key22 WHERE userName = '" + UserSearchingFor + "'"
+    sql = "SELECT * FROM " + TABLE + " WHERE userName = '" + UserSearchingFor + "'"
 
     # EXECUTE QUERY
     cursor.execute(sql)
