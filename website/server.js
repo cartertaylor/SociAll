@@ -74,8 +74,6 @@ app.use(passport.session())
 app.use((flash()));
 
 
-
-
 // INITIALIZE TO DATABASE 
 var connection = mysql.createConnection({
     host: databaseHost,

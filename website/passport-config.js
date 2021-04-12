@@ -10,9 +10,9 @@ function initialize(passport)
         (username, password, authCheckDone)
           {
             
-            // this part will be done with sql query (https://gist.github.com/manjeshpv/84446e6aa5b3689e8b84)
+            // this part will be done with sql query, ref / help: (https://gist.github.com/manjeshpv/84446e6aa5b3689e8b84)
             console.log("yoooooooooooooooooooo")
-            console.log(username + "" + password)
+
             // check for userName 
             if (username != "dogMan2223")
             {

@@ -35,7 +35,9 @@
         <script src="/res/js/homepage.js"></script>
 
         <!-- Modal Code (pop up from log in button)-->
-        <script>$('#myModal').modal({"backdrop": "static"})</script>
+        <script type="text/javascript">
+            $(window).on('load', function() {$('#myModal').modal('show');});
+        </script>
 
         <title>SociAll</title>
     </head>
@@ -109,7 +111,7 @@
         <div class="text">
         Avoid username inconsistency while connecting with colleagues, family, and friends
         </div>
-      
+        
       </div>
 
 
@@ -148,10 +150,14 @@
         </div>
               
 
-
-
+    
+        
       <!-- Modal -->
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    {{# if modalError}}
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    {{else}}
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    {{/if}}
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -166,10 +172,8 @@
                 <div class = "col-4"></div>
                 
                 {{# if messages.error }}
-                    <section class="errors">
-                        <ul>
+                    <section class="login-error">
                             {{messages.error}}
-                        </ul>
                     </section>
                 {{/if}}
 
