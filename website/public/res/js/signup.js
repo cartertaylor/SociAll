@@ -80,17 +80,17 @@ async function createAccount()
     {
       window.alert("Sorry, that username was alread taken, please try with another")
     }
+    
+    // otherwise account was created, redirect
+    else if (responseData.userCreated)
+    {
+      window.alert("Account created! Click 'OK' to be redirected to login")
+      window.location.replace("../../")
+    }
 
   }
 
-  /*
-  var set = {userName: }
-  var sql = "INSERT INTO test_key SET " + user_name;
-  var query = connection.query(sql, function(error, results, fields) {
-    if (error) window.alert("Username taken");
-  });
-  connection.end();
-  */
+
 
 }
 
@@ -119,7 +119,7 @@ function loginBoxesValid(signInInfo)
 }
 
 
-//window.alert("this is working!")
+
 // connection.connect();
 
 /*CREATE DATABASE new*/
