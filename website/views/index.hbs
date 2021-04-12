@@ -126,32 +126,39 @@
 
       <!-- Button trigger modal -->
       <div class = "second-main-section">
-        <div class="login-text-container">
-          <div class="login-text ">
-            Login or Create Account Here
-          </div>
-        </div>
-        
-        {{# if modalError}}
-            <button type="button" class="login-button" data-toggle="modal" data-target="#myModal">
-                Log In
-            </button>
-        {{else}}
-            <button type="button" class="login-button" data-toggle="modal" data-target="#exampleModalCenter">
-                Log In
-            </button>
-        {{/if}}
-        
-          <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
-            <lord-icon
-                src="https://cdn.lordicon.com/dxjqoygy.json"
-                trigger="loop"
-                delay="1000"
-                colors="primary:#121331,secondary:#08a88a"
-                >
-              </lord-icon>
-        
-        
+        <div class = "container">
+            <div class = "row">
+                    <div class = "col-sm-12 col-md-6 ">
+                        <div class="login-text-container">
+                            <div class="login-text ">
+                                Login or Create Account Here
+                            </div>
+                        </div>
+                    
+                        {{# if modalError}}
+                            <button type="button" class="login-button " data-toggle="modal" data-target="#myModal">
+                                Log In
+                            </button>
+                        {{else}}
+                            <button type="button" class="login-button " data-toggle="modal" data-target="#exampleModalCenter">
+                                Log In
+                            </button>
+                        {{/if}}
+                    </div>
+
+                    
+                        <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+                        <div class = "col-md-6 d-none d-md-block">
+                            <lord-icon
+                                
+                                src="https://cdn.lordicon.com/dxjqoygy.json"
+                                trigger="loop"
+                                delay="1000"
+                                colors="primary:#121331,secondary:#08a88a">
+                            </lord-icon>
+                    </div>
+                </div>
+            </div>    
         </div>
               
      <!-- End of scroll too far on page... -->
