@@ -123,7 +123,7 @@ def email():
     # SEND EMAIL
     server.sendmail(str(os.getenv("EMAIL_USERNAME")), str(os.getenv("EMAIL_USERNAME")), message)
 
-    return("Done")
+    return("Your message has been sent! We will take a look and get right back to you!")
     
 # to start file use 'python text_chat.py'
 # to expose port to internet use 'gunicorn -b :5000 text_chat:app'
