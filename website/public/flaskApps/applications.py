@@ -98,8 +98,8 @@ if __name__ == '__main__':
     app.run()
 
 
-print(str(os.getenv("EMAIL_USERNAME")))
-print(str(os.getenv('EMAIL_PASSWORD')))
+
+
 @app.route('/email', methods=['POST'])
 def email():
     # RETRIEVING DATA FROM POST REQUEST
@@ -109,20 +109,21 @@ def email():
     message = request.form.get("message")
 
     # ADD KEY INFO TO MESSAGE
-    message = ("First Name- {}\n"
-                "Last Name- {}\n"
-                "Email Address- {}\n"
-                "Message From User- {}\n").format(first_name, last_name, email, message)
+    message = ("First Name - {}\n"
+                "Last Name - {}\n"
+                "Email Address - {}\n"
+                "Message From User - {}\n").format(first_name, last_name, email, message)
 
     # SET UP AND LOG INTO GMAIL SMTP SERVER
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()
     server.login(str(os.getenv("EMAIL_USERNAME")), str(os.getenv('EMAIL_PASSWORD')))
     
-    print(message)
     # SEND EMAIL
     server.sendmail(str(os.getenv("EMAIL_USERNAME")), str(os.getenv("EMAIL_USERNAME")), message)
 
+    # RETURN RESPONSE TO USER 
+    # TODO: Make this look nicer
     return("Your message has been sent! We will take a look and get right back to you!")
     
 # to start file use 'python text_chat.py'
