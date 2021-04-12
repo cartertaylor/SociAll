@@ -1,0 +1,87 @@
+
+.footer
+{
+    /*position: absolute;  this causes issues*/
+    bottom:0;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 70px 0;
+    box-sizing: border-box;
+    background-color: var(--lightgreen);
+}
+
+.inner-footer
+{
+    display: block;
+    margin: 0 auto;
+    width:1100px;
+    height:100%;
+}
+
+.inner-footer .logo-container
+{
+    width: 35%;
+    float: left;
+    height:100%;
+    display: block;
+}
+
+.inner-footer .logo-container img
+{
+    width: 150px;
+    height:auto;
+    
+}
+
+.inner-footer .footer-third
+{
+    width: calc(21.6666666667% - 20px);
+    margin-right: 10px;
+    float: left;
+    height: 100%;
+}
+
+.inner-footer .footer-third:last-child
+{
+    margin-right:0;
+}
+
+.inner-footer .footer-third h1{
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    color: white;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inner-footer .footer-third a{
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: white;
+    display: block;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.inner-footer .footer-third li{
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 20px;
+}
+
+@media(max-width: 600px)
+{
+    .footer .inner-footer
+    {
+        width: 90%;
+    }
+
+    .inner-footer .logo-container, .inner-footer .footer-third
+    {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

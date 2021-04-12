@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="res/css/landingPage.css">
         <link rel="stylesheet" type="text/css" href="res/css/styles.css">
         <link rel="stylesheet" type="text/css" href="res/css/search.css">
-
+        <link rel="stylesheet" type="text/css" href="res/css/footer.css">
         
         <!-- Will add a required script tag for JS at a future date --> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -117,17 +117,18 @@
 
 
     </div>
-          
+  
+
       <div class="wave-container">
         <!-- Your wave goes here... -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="1" d="M0,224L60,229.3C120,235,240,245,360,218.7C480,192,600,128,720,106.7C840,85,960,107,1080,106.7C1200,107,1320,85,1380,74.7L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
       </div>
-
+    
 
       <!-- Button trigger modal -->
       <div class = "second-main-section">
         <div class="login-text-container">
-          <div class="login-text">
+          <div class="login-text ">
             Login or Create Account Here
           </div>
         </div>
@@ -154,6 +155,7 @@
         
         </div>
               
+     <!-- End of scroll too far on page... -->
 
       <!-- Modal -->
     {{# if modalError}}
@@ -214,25 +216,31 @@
       
       
       <!-- Footer -->
-      <footer>
-        <div class="container">
-          <div class="row">
-            
-            <div class="footername">
-              <h3>SociAll</h3>
-              <ul class="list-unstyled three-column">
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-              </ul>
+      <div class="footer">
+            <div class="inner-footer">
+                <div class="logo-container">
+                    <img src="./res/images/low_white_crop.png" alt="logo-footer">
+                </div>
+
+                <div class="footer-third">
+                    <h1>Need Help?</h1>
+                    <a href="#">Terms &amp; Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+
+                <div class="footer-third">
+                    <h1>Browse</h1>
+                    <a href="#">Features</a>
+                    <a href="#">Version News</a>
+                </div>
+
+                <div class="footer-third">
+                    <h1>Connect</h1>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                </div>
+
             </div>
-            
-          </div>
         </div>
-        <div class="copyright text-center">
-          Copyright &copy; 2021 <span>SociAll</span>
-        </div>
-      </footer>
 
 
 

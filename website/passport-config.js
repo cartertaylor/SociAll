@@ -38,18 +38,15 @@ function initialize(passport)
             foundUsername = false;
             foundPassword = false;
 
-            // Looking for an existing username 
+            // --Looking for an existing username-- 
             sql = mysql.format ("SELECT userName FROM ?? WHERE userName like ?", [userTable, username]);
             // checking database for username
             connection.query (
               sql, function (err, result)
               {
-                  
-                  if (err) 
-                  {
-                    console.log("ERRRRRRRRRRRR occured")
-                    return authCheckDone(err);
-                  }
+                  // check for error with failed athentication
+                  if (err) return authCheckDone(err);
+
                   
                   // make sure result isnt empty
                   if (result.length > 0)
@@ -70,56 +67,45 @@ function initialize(passport)
                     return authCheckDone(null, false, {message:"Incorrect username"});
                   }
 
-                  else
+                  // --look for existing password--
+                  sql = mysql.format ("SELECT password FROM ?? WHERE userName = ?", [userTable, username]);
+                  // only look for pasword if user is valid
+                  if (foundUsername)
                   {
-                     // otherewise we validated the user
-                      // maybe use result.insertID from query of user, which could make username
-                      // an object with an id next to it (sql insertID)
-                    return authCheckDone(null, username);
-                  }
+                    // checking database for password
+                    connection.query (
+                      sql, function (err, result)
+                      {
+                          if (err) return authCheckDone(err);
+                        
+                          // make sure result isnt empty
+                          if (result.length > 0)
+                          {
+                            // check hashedPassword against entered password
+                            if (bcrypt.compareSync(password, result[0].password))
+                            {
+                              foundPassword = true;
+                            }
+                          }
+                          
+                          // if we didnt find the password, error
+                            if (!foundPassword)
+                            {
+                              // function callback for not found
+                              return authCheckDone(null, false, {message:"Incorrect password"});
+                            }
+                          
+                          // only allow success if all these conditions are met (has to be done this way since it wasnt waiting for database query)
+                          else
+                          {
+                            // otherewise we validated the user
+                              // maybe use result.insertID from query of user, which could make username
+                              // an object with an id next to it (sql insertID)
+                            return authCheckDone(null, username);
+                          }
+                      });
+                  }     
               });
-
-            // look for existing password
-            sql = mysql.format ("SELECT password FROM ?? WHERE userName = ?", [userTable, username]);
-            
-            // only look for pasword if user is valid
-            if (foundUsername)
-            {
-              // checking database for password
-              connection.query (
-                sql, function (err, result)
-                {
-                    if (err) return authCheckDone(err);
-                  
-                    // make sure result isnt empty
-                    if (result.length > 0)
-                    {
-                      // check hashedPassword against entered password
-                      if (bcrypt.compareSync(password, result[0].password))
-                      {
-                        foundPassword = true;
-                      }
-                    }
-                    
-                    
-                    // if we didnt find the password, error
-                      if (!foundPassword)
-                      {
-                        // function callback for not found
-                        return authCheckDone(null, false, {message:"Incorrect password"});
-                      }
-                    
-                    else
-                    {
-                      // otherewise we validated the user
-                        // maybe use result.insertID from query of user, which could make username
-                        // an object with an id next to it (sql insertID)
-                      return authCheckDone(null, username);
-                    }
-                });
-            }
-
-            console.log("----------DID THIS RUN FIRST?------------")
            
           }
         
