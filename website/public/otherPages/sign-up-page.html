@@ -13,6 +13,8 @@
         <link rel="stylesheet" type="text/css" href="../res/css/landingPage.css">
         <link rel="stylesheet" type="text/css" href="../res/css/footer.css">
         <link rel="stylesheet" type="text/css" href="../res/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../res/css/header.css">
+
 
         <!-- Linking js to test page -->
         <script src="../res/js/signup.js"></script>
@@ -39,30 +41,26 @@
 
     <body>
       <!-- Nav Bar-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top mb-4">
-        <div class = "container-fluid">
-          <a class = "navbar-brand" href = "#"><img src = "../res/images/TempLogo.png" height = "50" width = "50"></a>
-          <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarResponsive">
-            <span class = "navbar-toggler-icon"></span>
-          </button>
-          <div class = "collapse navbar-collapse " id = "navbarResponsive">
-            <ul class = "navbar-nav ms-auto">
-              <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "../index.html">Home</a>
-              </li>
-              <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "#">About Us</a>
-              </li>
-              <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "#">Contact Us</a>
-              </li>
+      <div class="nav-container">
+        <nav class="navbar">
+            <img src="../res/images/low_white_crop.png" alt="logo" width="250" height="65">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu" style = "margin-bottom: 0rem;">
+                <li><a href="#" class="nav-links">Home</a></li>
+                <li><a href="#" class="nav-links">About</a></li>
+                <li><a href="#" class="nav-links">Contact</a></li>
+                <li><a href="#" class="nav-links nav-links-btn">Sign up</a></li>
             </ul>
-          </div>
-        </div>
-      </nav>
+        </nav>
+        <script src="../res/js/menu.js"></script>
+      </div>
 
       <!--Header Before sign up form-->
-      <h1 class = "text-center mt-1 mb-4">Create your SociAll account</h1>
+      <h1 class = "text-center mt-4 mb-4">Create your SociAll account</h1>
       <p class="light-font-weight text-center mb-4">One account for your social media. Find and engage with your friends with the tap of a button. </p>
 
       <div class = "container d-flex justify-content-center" >
@@ -137,7 +135,7 @@
 
 
       <!-- Footer -->
-      <div class="footer">
+      <div class="footer mt-2">
         <div class="inner-footer">
             <div class="logo-container">
                 <img src="../res/images/low_white_crop.png" alt="logo-footer">
