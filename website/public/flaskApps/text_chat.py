@@ -99,7 +99,6 @@ if __name__ == '__main__':
 
 
 
-
 @app.route('/email', methods=['POST'])
 def email():
     # RETRIEVING DATA FROM POST REQUEST
@@ -111,7 +110,7 @@ def email():
     # SET UP AND LOG INTO GMAIL SMTP SERVER
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()
-    server.login("contactusatsociall@gmail.com", str(os.getenv('EMAIL_PASSWORD')))
+    server.login(str(os.getenv("EMAIL_USERNAME")), str(os.getenv('EMAIL_PASSWORD')))
     
     # SEND EMAIL
     server.sendmail("contactusatsociall@gmail.com", "contactusatsociall@gmail.com", message)
