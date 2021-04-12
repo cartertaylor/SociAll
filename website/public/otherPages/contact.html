@@ -70,34 +70,32 @@
 
       <!-- Form for Signing up-->
       <div class = "container mt-3">
-        <form>
-          <div class="">
+        <form action = "http://sociall.live:5000/email" method = "POST">
             <!-- First Name Row -->
-            <div class="col-md-4 offset-md-4  mb-3">
+            <div class="col-md-4 offset-md-4 mb-3 form-group">
               <label for="validationDefault01">First name</label>
-              <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="" required>
+              <input type="text" class="form-control" id="validationDefault01" placeholder="First Name" name = "first_name" value="" required>
             </div>
 
             <!-- Last Name Row-->
-            <div class="col-md-4 offset-md-4  mb-3">
+            <div class="col-md-4 offset-md-4 mb-3 form-group">
               <label for="validationDefault02">Last name</label>
-              <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="" required>
+              <input type="text" class="form-control" id="validationDefault02" placeholder="Last Name" name = "last_name" value="" required>
             </div>
 
             <!-- Email Row-->
-            <div class="col-md-4 offset-md-4  mb-3">
+            <div class="col-md-4 offset-md-4 mb-3 form-group">
               <label for="validationDefault03">Email</label>
-              <input type="text" class="form-control" id="validationDefault03" placeholder="Email" required>
+              <input type="text" class="form-control" id="validationDefault03" placeholder="Email" name = "email_address" required>
             </div>
-          </div>
 
             <!-- Message Row-->
-            <div class="col-md-4 offset-md-4  mb-3">
+            <div class="col-md-4 offset-md-4 mb-3 form-group">
                 <label for="validationDefault03">Message</label>
-                <input type="text" class="form-control" id="validationDefault03" placeholder="Type Here" required>
+                <input type="text" class="form-control" id="validationDefault03" placeholder="Type Here" name = "message" required>
             </div>
 
-            <div class = "text-center">
+            <div class = "text-center form-group">
               <button class="btn btn-color-prim mt-3" type="submit">Submit</button>
             </div>
           </form>

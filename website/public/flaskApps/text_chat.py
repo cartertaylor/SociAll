@@ -5,6 +5,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 import mysql.connector as mysql
 from dotenv import  load_dotenv
 import os
+import smtplib
 
 # PREPPING FLASK OBJECT
 app = Flask(__name__)
@@ -97,5 +98,23 @@ if __name__ == '__main__':
     app.run()
 
 
+
+
+@app.route('/email', methods=['POST'])
+def email():
+    # RETRIEVING DATA FROM POST REQUEST
+    first_name = request.form.get("first_name")
+    last_name = request.form.get("last_name")
+    email = request.form.get("email_address")
+    message = request.form.get("message")
+
+    # SET UP AND LOG INTO GMAIL SMTP SERVER
+    server = smtplib.SMTP("smtp.gmail.com", 587)
+    server.starttls()
+    server.login("contactusatsociall@gmail.com", str(os.getenv('EMAIL_PASSWORD')))
+    
+    # SEND EMAIL
+    server.sendmail("contactusatsociall@gmail.com", "contactusatsociall@gmail.com", message)
+    
 # to start file use 'python text_chat.py'
 # to expose port to internet use 'gunicorn -b :5000 text_chat:app'
