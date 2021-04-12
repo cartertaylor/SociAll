@@ -98,7 +98,8 @@ if __name__ == '__main__':
     app.run()
 
 
-
+print(str(os.getenv("EMAIL_USERNAME")))
+print(str(os.getenv('EMAIL_PASSWORD')))
 @app.route('/email', methods=['POST'])
 def email():
     # RETRIEVING DATA FROM POST REQUEST
@@ -113,7 +114,9 @@ def email():
     server.login(str(os.getenv("EMAIL_USERNAME")), str(os.getenv('EMAIL_PASSWORD')))
     
     # SEND EMAIL
-    server.sendmail("contactusatsociall@gmail.com", "contactusatsociall@gmail.com", message)
+    server.sendmail(str(os.getenv("EMAIL_USERNAME")), str(os.getenv("EMAIL_USERNAME")), message)
+
+    return("Done")
     
 # to start file use 'python text_chat.py'
 # to expose port to internet use 'gunicorn -b :5000 text_chat:app'
