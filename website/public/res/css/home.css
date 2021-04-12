@@ -30,9 +30,10 @@
     align-items: center;
     height: 100px;
     width: 90%;
-    max-width: 1720px;
+    max-width: 1720px; 
     margin: 0 auto;
 }
+
 
 #navbar-logo
 {

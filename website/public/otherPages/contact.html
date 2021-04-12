@@ -11,6 +11,11 @@
         <!-- Created CSS -->
         <link rel="stylesheet" type="text/css" href="../res/css/landingPage.css">
         <link rel="stylesheet" type="text/css" href="../res/css/contact.css">
+        <link rel="stylesheet" type="text/css" href="../res/css/home.css">
+        <link rel="stylesheet" type="text/css" href="../res/css/brands.css">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 
         <!-- Will add a required script tag for JS at a future date -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -28,28 +33,23 @@
 
       <!-- Having different containers for differnet sections of the page -->
 
-      <!-- Nav Bar-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top ">
-        <div class = "container-fluid">
-          <a class = "navbar-brand" href = "#"><img src = "../res/images/TempLogo.png" height = "50" width = "50"></a>
-          <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarResponsive">
-            <span class = "navbar-toggler-icon"></span>
-          </button>
-          <div class = "collapse navbar-collapse " id = "navbarResponsive">
-            <ul class = "navbar-nav ms-auto">
-              <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "http://sociall.live">Home</a>
-              </li>
-              <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "http://sociall.live/otherPages/about-us.html">About Us</a>
-              </li>
-              <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "http://sociall.live/otherPages/contact.html">Contact Us</a>
-              </li>
+      <div class="nav-container">
+        <nav class="navbar">
+            <img src="../res/images/low_white_crop.png" alt="logo" width="250" height="65">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu" style = "margin-bottom: 0rem;">
+                <li><a href="#" class="nav-links">Home</a></li>
+                <li><a href="#" class="nav-links">About</a></li>
+                <li><a href="#" class="nav-links">Contact</a></li>
+                <li><a href="#" class="nav-links nav-links-btn">Sign up</a></li>
             </ul>
-          </div>
-        </div>
-      </nav>
+        </nav>
+        <script src="../res/js/menu.js"></script>
+    </div>
 
       <!-- Colored Header-->
       <header class="text-center">
