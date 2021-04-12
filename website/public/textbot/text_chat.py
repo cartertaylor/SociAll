@@ -78,10 +78,10 @@ def bot():
 
         # PREPARE STRING FOR MSG BODY
         finalString = ("SociAll Username: {}\n"
-                        "firstName: {}\n"
-                        "lastName: {}\n"
-                        "phoneNumber: {}\n"
-                        "userNameAgain(?): {}\n").format(userName, firstName, lastName, phoneNumber, email)
+                        "First Name: {}\n"
+                        "Last Name: {}\n"
+                        "Phone Number: {}\n"
+                        "Email Address: {}\n").format(userName, firstName, lastName, phoneNumber, email)
 
         # LOAD INFO INTO MSG BODY
         msg.body(finalString)
