@@ -108,11 +108,18 @@ def email():
     email = request.form.get("email_address")
     message = request.form.get("message")
 
+    # ADD KEY INFO TO MESSAGE
+    message = ("First Name- {}\n"
+                "Last Name- {}\n"
+                "Email Address- {}\n"
+                "Message From User- {}\n").format(first_name, last_name, email, message)
+
     # SET UP AND LOG INTO GMAIL SMTP SERVER
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()
     server.login(str(os.getenv("EMAIL_USERNAME")), str(os.getenv('EMAIL_PASSWORD')))
     
+    print(message)
     # SEND EMAIL
     server.sendmail(str(os.getenv("EMAIL_USERNAME")), str(os.getenv("EMAIL_USERNAME")), message)
 
