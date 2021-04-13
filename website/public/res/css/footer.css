@@ -2,7 +2,7 @@
 .footer
 {
     /*position: absolute;  this causes issues*/
-    bottom:0;
+    margin-bottom:0px;
     width: 100%;
     display: block;
     overflow: hidden;
