@@ -2,6 +2,7 @@
 .footer
 {
     /*position: absolute;  this causes issues*/
+    
     margin-bottom:0px;
     width: 100%;
     display: block;
@@ -72,7 +73,7 @@
     font-size: 20px;
 }
 
-@media(max-width: 600px)
+@media(max-width: 769px)
 {
     .footer .inner-footer
     {
