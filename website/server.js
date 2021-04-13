@@ -92,7 +92,6 @@ var connection = mysql.createConnection({
 //   });
 
 
-
 // Routes
 app.use('/', indexRouter);
 app.use('/', profileRouter);
@@ -139,7 +138,24 @@ app.use('/', profileRouter);
         userCreated = true;
         console.log("Column for user created");
       }
-    
+       
+      // create sql query line, creates a row within the table that hold profile info for given user 
+      sql = mysql.format ("INSERT INTO ?? SET userName = ?", [profileTable, request.body.userName]);
+
+      // adds a table for the users profile using the userName
+      connection.query (
+      sql, function (err, result, fields)
+      {
+          if (err) throw err;
+
+          // successful additon of the table (this will always succeed if the user table is created first above^^)
+          else
+          {   
+              console.log(result);
+          }
+
+      })
+
       // what we send back to the client 
       response.json({
         status: "success",
@@ -148,7 +164,7 @@ app.use('/', profileRouter);
         userCreated: userCreated
       })
       
-      // prevents errors (need more research)
+      // moves to next function that called the post request
       next();
       
     });
