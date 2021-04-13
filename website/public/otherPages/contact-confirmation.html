@@ -29,10 +29,6 @@
     </head>
 
     <body>
-      <!-- Will probably have to plan accordingly on setting up for different screen sizes -->
-
-      <!-- Having different containers for differnet sections of the page -->
-
       <div class="nav-container">
         <nav class="navbar">
           <a href="http://www.sociall.live">
@@ -57,52 +53,23 @@
       <header class="text-center">
         <div class="container d-flex align-items-center flex-column">
 
-            <!-- Masthead Heading-->
-            <h1 class="masthead-heading mt-4 mb-0 font-weight-bold">Contact</h1>
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
-            <!-- Masthead Subheading-->
-            <p class="masthead-subheading font-weight-light mb-0">We would love to help</p>
         </div>
       </header>
 
-      <!-- Form for Signing up-->
-      <div class = "container mt-3 mb-4">
-        <form action = "http://sociall.live:5000/email" method = "POST">
-            <!-- First Name Row -->
-            <div class="col-md-4 offset-md-4 mb-3 form-group">
-              <label for="validationDefault01">First name</label>
-              <input type="text" class="form-control" id="validationDefault01" placeholder="First Name" name = "first_name" value="" required>
-            </div>
-
-            <!-- Last Name Row-->
-            <div class="col-md-4 offset-md-4 mb-3 form-group">
-              <label for="validationDefault02">Last name</label>
-              <input type="text" class="form-control" id="validationDefault02" placeholder="Last Name" name = "last_name" value="" required>
-            </div>
-
-            <!-- Email Row-->
-            <div class="col-md-4 offset-md-4 mb-3 form-group">
-              <label for="validationDefault03">Email</label>
-              <input type="text" class="form-control" id="validationDefault03" placeholder="Email" name = "email_address" required>
-            </div>
-
-            <!-- Message Row-->
-            <div class="col-md-4 offset-md-4 mb-3 form-group">
-                <label for="validationDefault03">Message</label>
-                <input type="text" class="form-control" id="validationDefault03" placeholder="Type Here" name = "message" required>
-            </div>
-
-            <div class = "text-center form-group">
-              <a href="../otherPages/contact-confirmation.html" button class="btn btn-color-prim mt-3" type="submit">Submit</button></a>
-            </div>
-          </form>
-        </form>
-      </div> <!-- End of Form-->
+      <!-- The body of the page -->
+      <h1 class="masthead-heading mt-4 mb-0 font-weight-bold">
+        <div style= "text-align: center;"> <br> <br> <br>
+          Your message has been sent! <br>
+          We will take a look and get right back to you!
+        </div>
+      </h1>
+      <!--End of body of the page-->
 
       <!-- Footer -->
       <div class="footer mt-2">
