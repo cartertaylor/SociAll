@@ -65,13 +65,50 @@
             <img src="../res/images/buffJarJar.jpg" class="m-2 card-img-top rounded-circle img-max " alt="throw the personName here">
             <div class="card-body">
                 <h5 class="card-title text-center" id ="personName">{{name}}</h5>
-                <p class="card-text text-center" id = "bio">Hi, my name is {{name}}, I am currently a placeholder until we can funnel some user information
-                    over here from our database. 
+                <p class="card-text text-center" id = "bio">{{bio}} 
                 </p>
+                 <button type="button" class="" data-toggle="modal" data-target="#exampleModalCenter">
+                                Update Bio
+                </button>
             </div>
         </div >
     </div>
-        
+    
+
+    
+    <!--change bio info-->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ 
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Update Bio</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class = "row mt-4">
+
+                <div class = "col-4"></div>
+                <!-- Log in pops up upon click -->
+                <form action = "/editbio" method = "post">
+                    <div class="form-group">
+                       <!-- Message Row-->
+                        <div class="form-group">
+                            <label for="validationDefault03"></label>
+                            <input type="text" class="form-control" style = "" id="validationDefault03" placeholder="Type Here" name = "message" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onClick="window.location.reload();"> Update</button>
+                </form>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <hr class="largeSpacing offset-4 col-4">
     
     <div class="row container-fluid largeSpacing largeSpacingBottom">

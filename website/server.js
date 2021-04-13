@@ -27,6 +27,7 @@ const flash = require("express-flash");
 
 // default routes (will begin to transfer 'posts' and 'gets' here soon )
 const indexRouter = require('./routes/home');
+const profileRouter = require('./routes/authenticated-profile');
 
 // contains all supporter functions of express
 const app = express();
@@ -64,6 +65,7 @@ const databaseUser = process.env.DATABASE_USER_NAME;
 const databasePassword = process.env.DATABASE_PASSWORD ;
 const databaseName = process.env.DATABASE_NAME;
 const userTable = process.env.DATABASE_MAIN_TABLE;
+const profileTable = process.env.DATABASE_PROFILE_TABLE;
 const sessionSecret = process.env.SESSION_SECRET
 
 // must put it after the parsers (change secret to env variable)
@@ -89,9 +91,11 @@ var connection = mysql.createConnection({
 //     console.log("Connected to database!");
 //   });
 
+
+
 // Routes
 app.use('/', indexRouter);
-
+app.use('/', profileRouter);
 
 // POST method route
   // first parameter address of location (can be anywhere / any name at all)
@@ -228,11 +232,30 @@ app.use('/', indexRouter);
           // if we have a valid result (matching username in database)
           if (result.length > 0)
           {
-            console.log(result[0]);
+            
+            // do another query
+            
 
-            // dynamically send info to a page generated(views)
-            response.render('userpage', {userName: result[0].userName,
-              name: (result[0].firstName + result[0].lastName)});
+            // store base user information
+            currentUserName = result[0].userName;
+            currentName = result[0].firstName + " " + result[0].lastName;
+
+             // create sql query line
+            sql = mysql.format ("SELECT bio FROM ?? WHERE userName = ?", [profileTable, stringedName]);
+
+            // grab the existing bio information for user
+            connection.query (
+                sql, function (err, result, fields)
+                {
+                    if (err) throw err;
+                  
+                  userBio = result[0].bio;
+
+                  response.render('userpage', {userName: currentUserName,
+                    name: currentName,
+                    bio: userBio});
+                });
+
 
           }
 

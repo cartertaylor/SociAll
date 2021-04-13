@@ -1,10 +1,28 @@
 var express = require('express');
 var router = express.Router();
 const passport = require('passport');
+const mysql = require ('mysql');
+
 // helps us log out 
 const methodOverride = require('method-override');
 
 router.use(methodOverride('_method'));
+
+// grabbing env variables for database
+const databaseHost = process.env.DATABASE_HOST_NAME;
+const databaseUser = process.env.DATABASE_USER_NAME;
+const databasePassword = process.env.DATABASE_PASSWORD ;
+const databaseName = process.env.DATABASE_NAME;
+const profileTable = process.env.DATABASE_PROFILE_TABLE;
+
+// connecting to database
+var connection = mysql.createConnection({
+  host: databaseHost,
+  user: databaseUser,
+  password: databasePassword,
+  database: databaseName
+}, 'pool');
+
 
 /* GET home page. */
 router.get('/', checkNotAuthenticated, function(req, res, next) {
@@ -37,8 +55,33 @@ router.post('/submit', checkNotAuthenticated, setModal, passport.authenticate('l
 
 // will be the userpage
 router.get('/profile', ensureAuthenticated, function(req, res, next) {
-  res.render('profile', { title: 'Form Validation', name:req.user.id, success: req.session.success });
-  // req.session.errors = null;
+  
+  // grab current session user
+  currentUser = req.user.id;
+  
+  // start out the bio info
+  userBio = ""
+
+  // create sql query line
+  sql = mysql.format ("SELECT bio FROM ?? WHERE userName = ?", [profileTable, currentUser]);
+
+  // grab the existing bio information for user
+  connection.query (
+      sql, function (err, result, fields)
+      {
+        
+        if (err) throw err;
+        
+        // store bio info
+        userBio = result[0].bio;
+
+        res.render('profile', { title: 'Form Validation', name:req.user.id, bio:userBio, success: req.session.success });
+
+      });
+
+
+    
+    // req.session.errors = null;
 });
 
 // if the user is not logged in, they should be redirected to the home page
