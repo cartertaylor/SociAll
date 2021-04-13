@@ -1,5 +1,5 @@
 #imports
-from flask import Flask, request
+from flask import Flask, request, redirect
 import requests
 from twilio.twiml.messaging_response import MessagingResponse
 import mysql.connector as mysql
@@ -122,9 +122,8 @@ def email():
     # SEND EMAIL
     server.sendmail(str(os.getenv("EMAIL_USERNAME")), str(os.getenv("EMAIL_USERNAME")), message)
 
-    # RETURN RESPONSE TO USER 
-    # TODO: Make this look nicer
-    return("Your message has been sent! We will take a look and get right back to you!")
+    # REROUTE USER TO RESPONSE PAGE
+    return redirect("http://sociall.live/otherPages/contact-confirmation.html")
     
 # to start file use 'python text_chat.py'
 # to expose port to internet use 'gunicorn -b :5000 text_chat:app'
