@@ -12,7 +12,8 @@
         <link rel="stylesheet" type="text/css" href="../res/css/contact.css">
         <link rel="stylesheet" type="text/css" href="../res/css/landingPage.css">
         <link rel="stylesheet" type="text/css" href="../res/css/profile.css">
-
+        <link rel="stylesheet" type="text/css" href="../res/css/footer.css">
+        <link rel="stylesheet" type="text/css" href="../res/css/header.css">
 
         <!-- Will add a required script tag for JS at a future date -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -31,27 +32,25 @@
     <body>
 
       <!-- Nav Bar-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top ">
-        <div class = "container-fluid">
-          <a class = "navbar-brand" href = "#"><img src = "../res/images/TempLogo.png" height = "50" width = "50"></a>
-          <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarResponsive">
-            <span class = "navbar-toggler-icon"></span>
-          </button>
-          <div class = "collapse navbar-collapse " id = "navbarResponsive">
-            <ul class = "navbar-nav ms-auto">
-              <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "http://sociall.live">Home</a>
-              </li>
-              <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "http://sociall.live/otherPages/about-us">About Us</a>
-              </li>
-              <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "http://sociall.live/otherPages/contact">Contact Us</a>
-              </li>
+      <div class="nav-container">
+        <nav class="navbar">
+          <a href="http://www.sociall.live">
+            <img src="../res/images/low_white_crop.png" alt="logo" width="250" height="65">
+          </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu" style = "margin-bottom: 0rem;">
+              <li><a href="http://www.sociall.live" class="nav-links">Home</a></li>
+              <li><a href="./about-us.html" class="nav-links">About</a></li>
+              <li><a href="./contact.html" class="nav-links">Contact</a></li>
+              <li><a href="#" class="nav-links nav-links-btn">Sign up</a></li>
             </ul>
-          </div>
-        </div>
-      </nav>
+        </nav>
+        <script src="../res/js/menu.js"></script>
+      </div>
 
       <!--Header Before sign up form-->
       <h1 class = "text-center mt-4 mb-4" id = "userName">{{userName}}</h1>
@@ -71,9 +70,9 @@
         </div >
     </div>
         
-    <hr class="largeSpacing offset-sm-4 col-4">
+    <hr class="largeSpacing offset-4 col-4">
     
-    <div class="row largeSpacing largeSpacingBottom">
+    <div class="row container-fluid largeSpacing largeSpacingBottom">
 
       <div class="offset-sm-1 col-sm-3">
         <div class = "container d-flex justify-content-center">
@@ -138,25 +137,31 @@
 
 
       <!-- Footer -->
-      <footer>
-        <div class="container">
-          <div class="row">
-
-            <div class="footername">
-              <h3>SociAll</h3>
-              <ul class="list-unstyled three-column">
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-              </ul>
+      <div class="footer mt-2">
+        <div class="inner-footer">
+            <div class="logo-container">
+                <img src="../res/images/low_white_crop.png" alt="logo-footer">
             </div>
 
-          </div>
+            <div class="footer-third">
+                <h1>Need Help?</h1>
+                <a href="#">Terms &amp; Conditions</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="footer-third">
+                <h1>Browse</h1>
+                <a href="#">Features</a>
+                <a href="#">Version News</a>
+            </div>
+
+            <div class="footer-third">
+                <h1>Connect</h1>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            </div>
+
         </div>
-        <div class="copyright text-center">
-          Copyright &copy; 2021 <span>SociAll</span>
-        </div>
-      </footer>
+      </div>
 
 
     </body>
