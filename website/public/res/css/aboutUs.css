@@ -1,0 +1,32 @@
+.explanation-section
+{
+  font-size: 24px;
+  text-align: center;
+}
+
+.features-section
+{
+  font-size: 20px;
+  text-align: left;
+  text-indent: 30%
+}
+
+.features-titles
+{
+  font-size: 26px;
+  text-align: left;
+  text-indent: 25%;
+}
+
+.features-search-icon img
+{
+  position: absolute;
+  top: 655px;
+  left: 440px;
+  max-width: 40px;
+}
+
+.title
+{
+  text-align: left;
+}
