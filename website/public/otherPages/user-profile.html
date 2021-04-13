@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Required meta tags -->
+         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale = 1">
 
@@ -15,7 +15,6 @@
         <link rel="stylesheet" type="text/css" href="../res/css/footer.css">
         <link rel="stylesheet" type="text/css" href="../res/css/header.css">
 
-
         <!-- Will add a required script tag for JS at a future date -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
@@ -23,6 +22,7 @@
 
         <!-- Links to javascript page-->
         <script type="text/javascript" src="../res/js/sign-up.js"></script>
+        <script type="text/javascript" src="profile.js"></script>
 
         <title>SociAll</title>
     </head>
@@ -32,49 +32,46 @@
     <body>
 
       <!-- Nav Bar-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top ">
-        <div class = "container-fluid">
-          <a class = "navbar-brand" href = "#"><img src = "../res/images/TempLogo.png" height = "50" width = "50"></a>
-          <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarResponsive">
-            <span class = "navbar-toggler-icon"></span>
-          </button>
-          <div class = "collapse navbar-collapse " id = "navbarResponsive">
-            <ul class = "navbar-nav ms-auto">
-              <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "http://sociall.live">Home</a>
-              </li>
-              <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "http://sociall.live/otherPages/about-us">About Us</a>
-              </li>
-              <li class = "nav-item active">
-                <a class = "nav-link text-white" href = "http://sociall.live/otherPages/contact">Contact Us</a>
-              </li>
+      <div class="nav-container">
+        <nav class="navbar">
+          <a href="http://www.sociall.live">
+            <img src="../res/images/low_white_crop.png" alt="logo" width="250" height="65">
+          </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu" style = "margin-bottom: 0rem;">
+              <li><a href="http://www.sociall.live" class="nav-links">Home</a></li>
+              <li><a href="./about-us.html" class="nav-links">About</a></li>
+              <li><a href="./contact.html" class="nav-links">Contact</a></li>
+              <li><a href="#" class="nav-links nav-links-btn">Sign up</a></li>
             </ul>
-          </div>
-        </div>
-      </nav>
+        </nav>
+        <script src="../res/js/menu.js"></script>
+      </div>
 
       <!--Header Before sign up form-->
-      <h1 class = "text-center mt-4 mb-4" id = "userName">BigMuscleGungan</h1>
+      <h1 class = "text-center mt-4 mb-4" id = "userName">{{userName}}</h1>
 
-
-
+      
+    
       <!--Profile picture and name-->
     <div class = "container d-flex justify-content-center mb-2 ">
         <div class="card" style="width: 20rem;">
             <img src="../res/images/buffJarJar.jpg" class="m-2 card-img-top rounded-circle img-max " alt="throw the personName here">
             <div class="card-body">
-                <h5 class="card-title text-center" id ="personName">Buff Jar Jar</h5>
-                <p class="card-text text-center" id = "bio">Hi, my name is Jar Jar binks, I am currently a placeholder until we can funnel some user information
-                    over here from our database.
+                <h5 class="card-title text-center" id ="personName">{{name}}</h5>
+                <p class="card-text text-center" id = "bio">{{bio}} 
                 </p>
             </div>
         </div >
     </div>
-
-    <hr class="largeSpacing offset-sm-4 col-4">
-
-    <div class="row largeSpacing largeSpacingBottom">
+        
+    <hr class="largeSpacing offset-4 col-4">
+    
+    <div class="row container-fluid largeSpacing largeSpacingBottom">
 
       <div class="offset-sm-1 col-sm-3">
         <div class = "container d-flex justify-content-center">
@@ -83,9 +80,9 @@
               <img src="../res/images/icons/twitterIcon.png" class="mt-2 card-img-top icon-max center-block " alt="throw the personName here">
              </div>
             <div class="card-body">
-              <h5 class="card-title text-center" id ="socialMediaUserName">jarjarTwitter</h5>
-              <p class="card-text text-center" id = "bio">Hi, my name is Jar Jar binks, I am currently a placeholder until we can funnel some user information
-                over here from our database.
+              <h5 class="card-title text-center" id ="socialMediaUserName">{{name}}Twitter</h5>
+              <p class="card-text text-center" id = "bio">Hi, my name is {{name}}, I am currently a placeholder until we can funnel some user information
+                over here from our database. 
               </p>
             </div>
             <div class="card-footer">
@@ -102,9 +99,9 @@
               <img src="../res/images/icons/facebookIcon.png" class="mt-2 card-img-top icon-max center-block " alt="throw the personName here">
              </div>
             <div class="card-body">
-              <h5 class="card-title text-center" id ="socialMediaUserName">jarjarFacebook</h5>
-              <p class="card-text text-center" id = "bio">Hi, my name is Jar Jar binks, I am currently a placeholder until we can funnel some user information
-                over here from our database.
+              <h5 class="card-title text-center" id ="socialMediaUserName">{{name}}Facebook</h5>
+              <p class="card-text text-center" id = "bio">Hi, my name is {{name}}, I am currently a placeholder until we can funnel some user information
+                over here from our database. 
               </p>
             </div>
             <div class="card-footer">
@@ -121,9 +118,9 @@
               <img src="../res/images/icons/snapchatIcon.png" class="mt-2 card-img-top icon-max center-block " alt="throw the personName here">
              </div>
             <div class="card-body">
-              <h5 class="card-title text-center" id ="socialMediaUserName">JarJarBinks</h5>
-              <p class="card-text text-center" id = "bio">Hi, my name is Jar Jar binks, I am currently a placeholder until we can funnel some user information
-                over here from our database.
+              <h5 class="card-title text-center" id ="socialMediaUserName">{{name}}</h5>
+              <p class="card-text text-center" id = "bio">Hi, my name is {{name}}, I am currently a placeholder until we can funnel some user information
+                over here from our database. 
               </p>
             </div>
             <div class="card-footer">
@@ -135,31 +132,37 @@
 
     </div>
 
-
+       
 
 
       <!-- Footer -->
-      <footer>
-        <div class="container">
-          <div class="row">
-
-            <div class="footername">
-              <h3>SociAll</h3>
-              <ul class="list-unstyled three-column">
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-              </ul>
+      <div class="footer mt-2">
+        <div class="inner-footer">
+            <div class="logo-container">
+                <img src="../res/images/low_white_crop.png" alt="logo-footer">
             </div>
 
-          </div>
+            <div class="footer-third">
+                <h1>Need Help?</h1>
+                <a href="#">Terms &amp; Conditions</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="footer-third">
+                <h1>Browse</h1>
+                <a href="#">Features</a>
+                <a href="#">Version News</a>
+            </div>
+
+            <div class="footer-third">
+                <h1>Connect</h1>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            </div>
+
         </div>
-        <div class="copyright text-center">
-          Copyright &copy; 2021 <span>SociAll</span>
-        </div>
-      </footer>
+      </div>
 
 
     </body>
-
+    
 </html>
