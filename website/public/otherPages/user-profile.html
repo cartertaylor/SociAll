@@ -15,6 +15,9 @@
         <link rel="stylesheet" type="text/css" href="../res/css/footer.css">
         <link rel="stylesheet" type="text/css" href="../res/css/header.css">
 
+        <!--Google Font-->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&amp;display=swap" rel="stylesheet">
+
         <!-- Will add a required script tag for JS at a future date -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
@@ -53,14 +56,17 @@
       </div>
 
       <!--Header Before sign up form-->
-      <h1 class = "text-center mt-4 mb-4" id = "userName">{{userName}}</h1>
+      <div class="profile-container">
+        <span class="text1">Hello, I am</span>
+      </div>
+      <h1 class = "text-center mt-4 mb-4" id = "userName" style="font-family: Nunito, sans-serif; padding: 30px;">{{userName}}</h1>
 
       
     
       <!--Profile picture and name-->
     <div class = "container d-flex justify-content-center mb-2 ">
-        <div class="card" style="width: 20rem;">
-            <img src="../res/images/buffJarJar.jpg" class="m-2 card-img-top rounded-circle img-max " alt="throw the personName here">
+        <div class="avatar" style="border: none">
+            <img src="../res/images/buffJarJar.jpg" alt="throw the personName here">
             <div class="card-body">
                 <h5 class="card-title text-center" id ="personName">{{name}}</h5>
                 <p class="card-text text-center" id = "bio">{{bio}} 
@@ -73,7 +79,7 @@
     
     <div class="row container-fluid largeSpacing largeSpacingBottom">
 
-      <div class="offset-sm-1 col-sm-3">
+      <div class="offset-md-1 col-md-3">
         <div class = "container d-flex justify-content-center">
           <div class="card" style="width: 25rem;">
             <div class="row text-center">
@@ -92,7 +98,7 @@
         </div>
       </div>
 
-      <div class="col-sm-4">
+      <div class="col-md-4">
         <div class = "container d-flex justify-content-center">
           <div class="card" style="width: 25rem;">
             <div class="row text-center">
@@ -111,7 +117,7 @@
         </div>
       </div>
 
-      <div class="col-sm-3">
+      <div class="col-md-3">
         <div class = "container d-flex justify-content-center">
           <div class="card" style="width: 25rem;">
             <div class="row text-center">
