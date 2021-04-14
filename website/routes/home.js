@@ -74,8 +74,11 @@ router.get('/profile', ensureAuthenticated, function(req, res, next) {
         
         // store bio info
         userBio = result[0].bio;
+        
+        // store username
+        userName = req.user.id;
 
-        res.render('profile', { title: 'Form Validation', name:req.user.id, bio:userBio, success: req.session.success });
+        res.render('profile', { title: userName +"'s profile", name:userName, bio:userBio, success: req.session.success });
 
       });
 
