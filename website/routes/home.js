@@ -77,7 +77,7 @@ router.get('/profile', ensureAuthenticated, function(req, res, next) {
         
         // store username
         userName = req.user.id;
-
+        
         res.render('profile', { title: userName +"'s profile", name:userName, bio:userBio, success: req.session.success });
 
       });

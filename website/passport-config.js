@@ -64,7 +64,7 @@ function initialize(passport)
                   if (!foundUsername)
                   {
                     // function callback for not found
-                    return authCheckDone(null, false, {message:"Incorrect username"});
+                    return authCheckDone(null, false, {message:"The username and password you entered did not match our records"});
                   }
 
                   // --look for existing password--
@@ -92,7 +92,7 @@ function initialize(passport)
                             if (!foundPassword)
                             {
                               // function callback for not found
-                              return authCheckDone(null, false, {message:"Incorrect password"});
+                              return authCheckDone(null, false, {message:"The username and password you entered did not match our records"});
                             }
                           
                           // only allow success if all these conditions are met (has to be done this way since it wasnt waiting for database query)
