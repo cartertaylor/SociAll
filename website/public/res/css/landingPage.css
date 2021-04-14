@@ -16,6 +16,9 @@
     color: white;
     font-size: large; 
     font-family: Arial, Helvetica, sans-serif; 
+    background: linear-gradient(-45deg, #28fdd8, #48f5b2, #19ffa7, #19f0be);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 }
 
 .landing-des-container
@@ -199,19 +202,13 @@ lord-icon
   color:#f3f4f5;
   background-color: #31d898;
   border-color:#31d898;
-
- }
+}
 
 .light-font-weight{
   font-weight:300;
 }
 
-.masthead 
-{
-  background: linear-gradient(-45deg, #31d898, #48f5b2, #19ffa7, #19f0be);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-}
+
 
 @keyframes gradient 
 {
