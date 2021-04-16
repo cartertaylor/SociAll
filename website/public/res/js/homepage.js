@@ -11,6 +11,7 @@ async function getUser(event)
     // grab current user within search bar 
     currentSearchUser = (document.getElementById("searcher").value);
     
+    
     testObject = {searchData: currentSearchUser};
 
     // post request
@@ -27,7 +28,16 @@ async function getUser(event)
     // const responseData = await response.json();
     // console.log(responseData);
 
-    document.location.href= 'user/' + currentSearchUser;
+    // check for empty search bar
+    if (currentSearchUser === "")
+      {
+        window.alert("Please Fill the search bar with a user") 
+      }
+    else
+    {
+      // redirects user to new page 
+      document.location.href= 'user/' + currentSearchUser;
+    }
     
 } 
 
