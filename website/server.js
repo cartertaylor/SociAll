@@ -293,7 +293,7 @@ app.use('/', profileRouter);
                   response.render('userpage', {userName: currentUserName,
                     name: currentName,
                     bio: userBio,
-                    twitterUsername:twitterHandle});
+                    twitterUsername: twitterHandle});
                 });
 
 
