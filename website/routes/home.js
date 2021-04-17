@@ -62,8 +62,8 @@ router.get('/profile', ensureAuthenticated, function(req, res, next) {
   // start out the bio info
   userBio = ""
 
-  // create sql query line
-  sql = mysql.format ("SELECT bio FROM ?? WHERE userName = ?", [profileTable, currentUser]);
+  // create sql query line (select the social media info as well)
+  sql = mysql.format ("SELECT bio, twitterUser FROM ?? WHERE userName = ?", [profileTable, currentUser]);
 
   // grab the existing bio information for user
   connection.query (
@@ -72,13 +72,19 @@ router.get('/profile', ensureAuthenticated, function(req, res, next) {
         
         if (err) throw err;
         
+        console.log(result);
+
         // store bio info
         userBio = result[0].bio;
         
-        // store username
+        // store twitter username info
+        twitterHandle = result[0].twitterUser;
+
+        // store sociall username
         userName = req.user.id;
         
-        res.render('profile', { title: userName +"'s profile", name:userName, bio:userBio, success: req.session.success });
+        // render profile template with newly stored variables
+        res.render('profile', { title: userName +"'s profile", name:userName, bio:userBio, twitterUsername:twitterHandle, success: req.session.success });
 
       });
 

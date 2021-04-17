@@ -22,11 +22,10 @@ var connection = mysql.createConnection({
 
 
 // post request for a user to edit their profile
-router.post('/editbio', function(req, res, next) {
+router.post('/edit/bio', function(req, res, next) {
     
     // gets us our user name from current session
     currentUser = req.session.passport.user;
-
     
     // finds the bio we are updating from
     updatedBio = req.body.message;
@@ -35,6 +34,48 @@ router.post('/editbio', function(req, res, next) {
     sql = mysql.format ("UPDATE ?? SET bio = ? WHERE userName = ?", [profileTable, updatedBio, currentUser]);
 
     // update the users bio
+    connection.query (
+        sql, function (err, result, fields)
+        {
+            if (err) throw err;
+
+            // otherwise we want the page to refresh with our new data
+            else
+            {
+                res.redirect(req.get('referer'));
+            }
+
+        })
+    
+});
+
+// Post for each that will work for any of the edits of the user
+router.post('/edit/twitterUser', function(req, res, next) {
+    
+    // gets us our user name from current session
+    currentUser = req.session.passport.user;
+
+    // console.log(req);
+    // console.log(req.originalUrl);
+    console.log(req.body);
+    
+    // -- trying to find a way to only have one post request for all usernames -- 
+    // finds name of column given post
+    // let columnChange = req.originalUrl;
+    // columnChange = columnChange.split('/');
+    // foundColumn = columnChange[0];
+    
+    // console.log(columnChange);
+    // console.log(columnChange);
+    // console.log(foundColumn);
+    
+    // finds the bio we are updating from
+    updatedUsername = req.body.message;
+    
+    // create sql query line to insert twitter username into database
+    sql = mysql.format ("UPDATE ?? SET twitterUser = ? WHERE userName = ?", [profileTable, updatedUsername, currentUser]);
+
+    // update the user name for given social media
     connection.query (
         sql, function (err, result, fields)
         {

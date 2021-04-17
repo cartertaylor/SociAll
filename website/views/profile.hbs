@@ -14,6 +14,9 @@
         <link rel="stylesheet" type="text/css" href="../res/css/profile.css">
         <link rel="stylesheet" type="text/css" href="../res/css/footer.css">
         <link rel="stylesheet" type="text/css" href="../res/css/header.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+
 
         <!-- Will add a required script tag for JS at a future date -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -67,7 +70,7 @@
                 <h5 class="card-title text-center" id ="personName">{{name}}</h5>
                 <p class="card-text text-center" id = "bio">{{bio}} 
                 </p>
-                 <button type="button" class="" data-toggle="modal" data-target="#exampleModalCenter">
+                 <button type="button" class="" data-toggle="modal" data-target="#bioModal">
                                 Update Bio
                 </button>
             </div>
@@ -77,7 +80,7 @@
 
     
     <!--change bio info-->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="bioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
  
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
@@ -88,11 +91,11 @@
               </button>
             </div>
             <div class="modal-body">
-              <div class = "row mt-4">
+              <div class = "row">
 
                 <div class = "col-4"></div>
                 <!-- Log in pops up upon click -->
-                <form action = "/editbio" method = "post">
+                <form action = "/edit/bio" method = "post">
                     <div class="form-group">
                        <!-- Message Row-->
                         <div class="form-group">
@@ -120,13 +123,16 @@
               <img src="../res/images/icons/twitterIcon.png" class="mt-2 card-img-top icon-max center-block " alt="throw the personName here">
              </div>
             <div class="card-body">
-              <h5 class="card-title text-center" id ="socialMediaUserName">{{name}}Twitter</h5>
+              <h5 class="card-title text-center" id ="socialMediaUserName">{{twitterUsername}}</h5>
               <p class="card-text text-center" id = "bio">Hi, my name is {{name}}, I am currently a placeholder until we can funnel some user information
                 over here from our database. 
               </p>
             </div>
             <div class="card-footer">
-              <p href="#" class="card-link text-center">Link</p>
+              <button type="button" class="btn edit-button" data-toggle="modal" data-target="#userModal">
+                                <i class="fas fa-edit "></i>
+                </button>
+              <!-- <p href="#" class="card-link text-center">Link</p> -->
             </div>
           </div>
         </div>
@@ -172,7 +178,39 @@
 
     </div>
 
-       
+      
+          <!--change bio info-->
+        <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ 
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Update Username</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class = "row">
+
+                <div class = "col-4"></div>
+                <!-- Log in pops up upon click -->
+                <form action = "/edit/twitterUser" method = "post">
+                    <div class="form-group">
+                       <!-- Message Row-->
+                        <div class="form-group">
+                            <label for="validationDefault03"></label>
+                            <input type="text" class="form-control" style = "" id="validationDefault03" placeholder="Type Here" name = "message" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onClick="window.location.reload();"> Update</button>
+                </form>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
       <!-- Footer -->
