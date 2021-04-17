@@ -275,7 +275,7 @@ app.use('/', profileRouter);
             currentName = result[0].firstName + " " + result[0].lastName;
 
              // create sql query line
-            sql = mysql.format ("SELECT bio FROM ?? WHERE userName = ?", [profileTable, stringedName]);
+            sql = mysql.format ("SELECT bio, twitterUser FROM ?? WHERE userName = ?", [profileTable, stringedName]);
 
             // grab the existing bio information for user
             connection.query (
@@ -284,10 +284,16 @@ app.use('/', profileRouter);
                     if (err) throw err;
                   
                   userBio = result[0].bio;
+                  
+                  // store twitter username info
+                  twitterHandle = result[0].twitterUser;
+
+                  
 
                   response.render('userpage', {userName: currentUserName,
                     name: currentName,
-                    bio: userBio});
+                    bio: userBio,
+                    twitterUsername:twitterHandle});
                 });
 
 
