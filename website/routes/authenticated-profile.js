@@ -49,8 +49,9 @@ router.post('/edit/bio', function(req, res, next) {
     
 });
 
-// Post for each that will work for any of the edits of the user
-router.post('/edit/:socialMediaType', function(req, res, next) {
+// Universal social media handle updater (can use this when sociall adds more social media)
+ // updates given social media username, for the Sociall account (ex: twitter, facebook, etc..) 
+router.post('/edit/:socialMediaType', function(req, res) {
     
     // gets us our user name from current session
     currentUser = req.session.passport.user;
@@ -73,7 +74,7 @@ router.post('/edit/:socialMediaType', function(req, res, next) {
 
     // update the user name for given social media
     connection.query (
-        sql, function (err, result, fields)
+        sql, function (err, result)
         {
             if (err) throw err;
 
@@ -101,17 +102,14 @@ function getSocialMediaQuery(socialMediaString, updatedUsername, currentUser)
             break;
 
         case "twitterUser":
-            console.log("we found a twitterUser")
             sqlQuery = mysql.format ("UPDATE ?? SET twitterUser = ? WHERE userName = ?", [profileTable, updatedUsername, currentUser]);
             break;
 
         case "facebookUser":
-            console.log("we found a facebook")
             sqlQuery = mysql.format ("UPDATE ?? SET facebookUser = ? WHERE userName = ?", [profileTable, updatedUsername, currentUser]);
             break;
 
         case "snapchatUser":
-            console.log("we found a snaochat")
             sqlQuery = mysql.format ("UPDATE ?? SET facebookUser = ? WHERE userName = ?", [profileTable, updatedUsername, currentUser]);
             break;
     }

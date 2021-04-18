@@ -63,7 +63,7 @@ router.get('/profile', ensureAuthenticated, function(req, res, next) {
   userBio = ""
 
   // create sql query line (select the social media info as well)
-  sql = mysql.format ("SELECT bio, twitterUser FROM ?? WHERE userName = ?", [profileTable, currentUser]);
+  let sql = mysql.format ("SELECT bio, twitterUser, facebookUser, snapchatUser FROM ?? WHERE userName = ?", [profileTable, currentUser]);
 
   // grab the existing bio information for user
   connection.query (
@@ -75,22 +75,28 @@ router.get('/profile', ensureAuthenticated, function(req, res, next) {
         console.log(result);
 
         // store bio info
-        userBio = result[0].bio;
+        let userBio = result[0].bio;
         
         // store twitter username info
-        twitterHandle = result[0].twitterUser;
+        let twitterHandle = result[0].twitterUser;
+
+        // store facebook username info
+        let facebookHandle = result[0].facebookUser;
 
         // store sociall username
-        userName = req.user.id;
+        let userName = req.user.id;
         
         // render profile template with newly stored variables
-        res.render('profile', { title: userName +"'s profile", name:userName, bio:userBio, twitterUsername:twitterHandle, success: req.session.success });
+        res.render('profile', 
+        { title: userName +"'s profile",
+          name: userName,
+          bio: userBio,
+          twitterUsername: twitterHandle,
+          facebookUsername: facebookHandle,
+          success: req.session.success });
 
       });
 
-
-    
-    // req.session.errors = null;
 });
 
 // if the user is not logged in, they should be redirected to the home page

@@ -257,25 +257,30 @@ app.use('/', profileRouter);
             currentName = result[0].firstName + " " + result[0].lastName;
 
              // create sql query line
-            sql = mysql.format ("SELECT bio, twitterUser FROM ?? WHERE userName = ?", [profileTable, stringedName]);
+            sql = mysql.format ("SELECT bio, twitterUser, facebookUser FROM ?? WHERE userName = ?", [profileTable, stringedName]);
 
             // grab the existing bio information for user
             connection.query (
-                sql, function (err, result, fields)
+                sql, function (err, result)
                 {
                     if (err) throw err;
                   
-                  userBio = result[0].bio;
+
+                  console.log(result[0]);
+
+                  let userBio = result[0].bio;
                   
                   // store twitter username info
-                  twitterHandle = result[0].twitterUser;
-
+                  let twitterHandle = result[0].twitterUser;
                   
+                  // store facebook username info
+                  let facebookHandle = result[0].facebookUser;
 
                   response.render('userpage', {userName: currentUserName,
                     name: currentName,
                     bio: userBio,
-                    twitterUsername: twitterHandle});
+                    twitterUsername: twitterHandle,
+                    facebookUsername: facebookHandle});
                 });
 
 
