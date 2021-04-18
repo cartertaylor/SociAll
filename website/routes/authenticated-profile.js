@@ -50,30 +50,26 @@ router.post('/edit/bio', function(req, res, next) {
 });
 
 // Post for each that will work for any of the edits of the user
-router.post('/edit/twitterUser', function(req, res, next) {
+router.post('/edit/:socialMediaType', function(req, res, next) {
     
     // gets us our user name from current session
     currentUser = req.session.passport.user;
-
-    // console.log(req);
-    // console.log(req.originalUrl);
-    console.log(req.body);
     
     // -- trying to find a way to only have one post request for all usernames -- 
-    // finds name of column given post
-    // let columnChange = req.originalUrl;
-    // columnChange = columnChange.split('/');
-    // foundColumn = columnChange[0];
+    // finds name of column given the post sent
+    let columnChange = req.originalUrl;
+    columnChange = columnChange.split('/');
+
+    // finds the split portion we want (social media type)
+    foundColumn = columnChange[2];
     
-    // console.log(columnChange);
-    // console.log(columnChange);
-    // console.log(foundColumn);
-    
-    // finds the bio we are updating from
+    // finds the username we are updating from
     updatedUsername = req.body.message;
     
-    // create sql query line to insert twitter username into database
-    sql = mysql.format ("UPDATE ?? SET twitterUser = ? WHERE userName = ?", [profileTable, updatedUsername, currentUser]);
+    // assemble sql query for social media depending on the post req from profile page
+    sql = getSocialMediaQuery(foundColumn, updatedUsername, currentUser);
+
+    console.log(sql);
 
     // update the user name for given social media
     connection.query (
@@ -90,5 +86,39 @@ router.post('/edit/twitterUser', function(req, res, next) {
         })
     
 });
+
+// finds the query needed to be done depending on the post request details
+function getSocialMediaQuery(socialMediaString, updatedUsername, currentUser)
+{   
+    // initialize
+    let sqlQuery = "";
+
+    // determine query needed to be done
+    switch (socialMediaString)
+    {
+        default:
+            console.log("yoooo")
+            break;
+
+        case "twitterUser":
+            console.log("we found a twitterUser")
+            sqlQuery = mysql.format ("UPDATE ?? SET twitterUser = ? WHERE userName = ?", [profileTable, updatedUsername, currentUser]);
+            break;
+
+        case "facebookUser":
+            console.log("we found a facebook")
+            sqlQuery = mysql.format ("UPDATE ?? SET facebookUser = ? WHERE userName = ?", [profileTable, updatedUsername, currentUser]);
+            break;
+
+        case "snapchatUser":
+            console.log("we found a snaochat")
+            sqlQuery = mysql.format ("UPDATE ?? SET facebookUser = ? WHERE userName = ?", [profileTable, updatedUsername, currentUser]);
+            break;
+    }
+
+    // return the query that was found
+    return sqlQuery;
+}
+
 
 module.exports = router;

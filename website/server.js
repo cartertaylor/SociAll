@@ -92,24 +92,6 @@ var connection = mysql.createConnection({
 //   });
 
 
-// add column to existing table
-// var sql = "ALTER TABLE profile ADD twitterUser varchar(255)";
-// var sql = "SELECT * from profile";
-
-// // example query
-// connection.query (
-//   sql, function (err, result, fields)
-//   {
-//       if (err) throw err;
-
-//       // successful additon of the table (this will always succeed if the user table is created first above^^)
-//       else
-//       {   
-//           console.log(result);
-//       }
-
-//   })
-
 // Routes
 app.use('/', indexRouter);
 app.use('/', profileRouter);
