@@ -126,4 +126,4 @@ def email():
     return redirect("http://sociall.live/otherPages/contact-confirmation.html")
     
 # to start file use 'python text_chat.py'
-# to expose port to internet use 'gunicorn -b :5000 text_chat:app'
+# to expose port to internet use 'gunicorn -b :5000 applications:app'
