@@ -257,7 +257,7 @@ app.use('/', profileRouter);
             currentName = result[0].firstName + " " + result[0].lastName;
 
              // create sql query line
-            sql = mysql.format ("SELECT bio, twitterUser, facebookUser FROM ?? WHERE userName = ?", [profileTable, stringedName]);
+            sql = mysql.format ("SELECT bio, twitterUser, facebookUser, snapchatUser FROM ?? WHERE userName = ?", [profileTable, stringedName]);
 
             // grab the existing bio information for user
             connection.query (
@@ -276,11 +276,15 @@ app.use('/', profileRouter);
                   // store facebook username info
                   let facebookHandle = result[0].facebookUser;
 
+                  // store snapchat username info
+                  let snapchatHandle = result[0].snapchatUser;
+                  
                   response.render('userpage', {userName: currentUserName,
                     name: currentName,
                     bio: userBio,
                     twitterUsername: twitterHandle,
-                    facebookUsername: facebookHandle});
+                    facebookUsername: facebookHandle,
+                    snapchatUsername: snapchatHandle});
                 });
 
 

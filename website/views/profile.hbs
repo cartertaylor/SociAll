@@ -139,6 +139,7 @@
         </div>
       </div>
 
+      <!-- Facebook Card -->
       <div class="col-sm-4">
         <div class = "container d-flex justify-content-center">
           <div class="card" style="width: 25rem;">
@@ -161,6 +162,7 @@
         </div>
       </div>
 
+      <!-- Snapchat Card -->
       <div class="col-sm-3">
         <div class = "container d-flex justify-content-center">
           <div class="card" style="width: 25rem;">
@@ -168,13 +170,16 @@
               <img src="../res/images/icons/snapchatIcon.png" class="mt-2 card-img-top icon-max center-block " alt="throw the personName here">
              </div>
             <div class="card-body">
-              <h5 class="card-title text-center" id ="socialMediaUserName">{{name}}</h5>
+              <h5 class="card-title text-center" id ="socialMediaUserName">{{snapchatUsername}}</h5>
               <p class="card-text text-center" id = "bio">Hi, my name is {{name}}, I am currently a placeholder until we can funnel some user information
                 over here from our database. 
               </p>
             </div>
             <div class="card-footer">
-              <p href="#" class="card-link text-center">Link</p>
+              <button type="button" class="btn edit-button" data-toggle="modal" data-target="#userSnapchatModal">
+                                <i class="fas fa-edit "></i>
+                </button>
+              <!-- <p href="#" class="card-link text-center">Link</p> -->
             </div>
           </div>
         </div>
@@ -233,6 +238,39 @@
                 <div class = "col-4"></div>
                 <!-- Log in pops up upon click -->
                 <form action = "/edit/facebookUser" method = "post">
+                    <div class="form-group">
+                       <!-- Message Row-->
+                        <div class="form-group">
+                            <label for="validationDefault03"></label>
+                            <input type="text" class="form-control" style = "" id="validationDefault03" placeholder="Type Here" name = "message" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onClick="window.location.reload();"> Update</button>
+                </form>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--change snapchat info-->
+      <div class="modal fade" id="userSnapchatModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ 
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Update Username</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class = "row">
+
+                <div class = "col-4"></div>
+                <!-- Log in pops up upon click -->
+                <form action = "/edit/snapchatUser" method = "post">
                     <div class="form-group">
                        <!-- Message Row-->
                         <div class="form-group">

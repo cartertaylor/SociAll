@@ -98,7 +98,7 @@ function getSocialMediaQuery(socialMediaString, updatedUsername, currentUser)
     switch (socialMediaString)
     {
         default:
-            console.log("yoooo")
+            sqlQuery = "";
             break;
 
         case "twitterUser":
@@ -110,7 +110,7 @@ function getSocialMediaQuery(socialMediaString, updatedUsername, currentUser)
             break;
 
         case "snapchatUser":
-            sqlQuery = mysql.format ("UPDATE ?? SET facebookUser = ? WHERE userName = ?", [profileTable, updatedUsername, currentUser]);
+            sqlQuery = mysql.format ("UPDATE ?? SET snapchatUser = ? WHERE userName = ?", [profileTable, updatedUsername, currentUser]);
             break;
     }
 

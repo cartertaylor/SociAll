@@ -53,7 +53,7 @@ router.post('/submit', checkNotAuthenticated, setModal, passport.authenticate('l
 
 }) );
 
-// will be the userpage
+// userpage info for logged in user
 router.get('/profile', ensureAuthenticated, function(req, res, next) {
   
   // grab current session user
@@ -83,6 +83,9 @@ router.get('/profile', ensureAuthenticated, function(req, res, next) {
         // store facebook username info
         let facebookHandle = result[0].facebookUser;
 
+        // store snapchat username info
+        let snapchatHandle = result[0].snapchatUser;
+
         // store sociall username
         let userName = req.user.id;
         
@@ -93,6 +96,7 @@ router.get('/profile', ensureAuthenticated, function(req, res, next) {
           bio: userBio,
           twitterUsername: twitterHandle,
           facebookUsername: facebookHandle,
+          snapchatUsername: snapchatHandle,
           success: req.session.success });
 
       });
