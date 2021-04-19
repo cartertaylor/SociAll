@@ -239,11 +239,6 @@ lord-icon
   padding-top: 0;
 }
 
-.container-fluid
-{
-  
-  
-}
 
 .navbar-toggler-icon
 {
@@ -363,52 +358,6 @@ textarea
     margin-top: 0;
   }
 }
-/* 
-footer 
-{
-  
-  border: white thin;
-  color: #000000;
-  flex: 0 0 50px;
-  margin-top: auto;
-  text-align: center;
-}
-
-footer h3 
-{
- color: #000000;
-  letter-spacing: 1px;
-  margin: 30px 0 20px;
-}
-
-footer .three-column 
-{
- overflow: hidden;
-}
-
-footer .three-column li
-{
- width: 33.3333%;
- float: left;
- padding: 5px 0;
-}
-
-
-footer .copyright 
-{
-  padding: 15px 0;
-  
-  font-size: 15px;
-}
-
-footer .copyright span 
-{
-  color: #000000;
-}
-
-.symbol-size{
-  padding:15px;
-} */
 
 
 
