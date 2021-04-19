@@ -6,6 +6,7 @@ import mysql.connector as mysql
 from dotenv import  load_dotenv
 import os
 import smtplib
+from collections import OrderedDict
 
 # PREPPING FLASK OBJECT
 app = Flask(__name__)
@@ -99,24 +100,29 @@ def bot():
     # IF LIST NOT EMPTY, PARSE INFO AND RETURN
     else:
         # LOAD INFO INTO DICTIONARY
-        userDict = { "SociAll Username: " : userInfo[0],
-                    "First Name: "        : userInfo[1],
-                    "Last Name: "         : userInfo[2],
-                    "Phone Number: "      : userInfo[3],
-                    "Email Address: "     : userInfo[4],
-                    "Twitter Handle: "    : userProfile[2],
-                    "Facebook Handle: "   : userProfile[3],
-                    "Snapchat Handle: "   : userProfile[4]
-        }
+        userDict = collections.OrderedDict("SociAll Username: " = userInfo[0],
+                    "First Name: "        = userInfo[1],
+                    "Last Name: "         = userInfo[2],
+                    "Phone Number: "      = userInfo[3],
+                    "Email Address: "     = userInfo[4],
+                    "Twitter Handle: "    = userProfile[2],
+                    "Facebook Handle: "   = userProfile[3],
+                    "Snapchat Handle: "   = userProfile[4]
+        )
+
+
+        print(userDict)
+
 
         # PREPARE FINALSTRING TO BE ADDED TO
         finalString = ''
 
         # LOOP THROUGH DICTIONARY AND ADD COMPONENTS TO THE FINAL STRING
-        for key in userDict:
+        for item in userDict.items():
             # IF DICT VALUE NOT NULL, LOAD INTO FINALSTRING
-            if userDict[key] != '':
-                finalString += (str(key) + str(userDict[key]) + '\n')
+            if item[1] != '':
+                print(item[0] + item[1])
+                finalString += item[0] + item[1] + '\n'
 
 
         # LOAD INFO INTO MSG BODY
