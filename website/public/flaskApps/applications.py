@@ -44,18 +44,6 @@ def searchDatabase(UserSearchingFor):
     # PREPARE QUERY OF PROFILE TABLE TO BE EXECUTED
     sql = "SELECT * FROM " + PROFILE_TABLE + " WHERE userName = '" + UserSearchingFor + "'"
     
-    '''
-    (username, twitter handle, facebook handle, instagram handle)
-    ('qmelssen', 'qmeltwitter', 'qmelfacebook', 'qmelinsta')
-    ('qmelssen', '', 'qmelfacebook', 'qmelinsta')
-
-    Username: Quinn 
-    Email: qm@gmail.com
-    Facebook: 
-    Instagram: 
-    Snapchat: snapchathandle
-    '''
-
     # EXECUTE QUERY
     cursor.execute(sql)
 
@@ -67,9 +55,6 @@ def searchDatabase(UserSearchingFor):
     cursor.close()
 
     db_connection.close()
-
-    print(resultUser)
-    print(resultProfile)
 
     return resultUser, resultProfile
 
