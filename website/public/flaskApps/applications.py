@@ -22,6 +22,7 @@ def searchDatabase(UserSearchingFor):
     USER = os.getenv('DATABASE_USER_NAME')
     PASSWORD = os.getenv('DATABASE_PASSWORD')
     TABLE = os.getenv('DATABASE_MAIN_TABLE')
+    PROFILE_TABLE = os.getenv('DATABASE_PROFILE_TABLE')
 
     # ESTABLISH CONNECTION
     db_connection = mysql.connect(host = HOST, database = DATABASE, user = USER, password = PASSWORD)
@@ -30,20 +31,46 @@ def searchDatabase(UserSearchingFor):
     # CREATE CURSOR OBJECT TO RUN SQL QUERIES
     cursor = db_connection.cursor()
 
-    # PREPARE QUERY TO BE EXECUTED
+    # PREPARE QUERY OF USER TABLE TO BE EXECUTED
     sql = "SELECT * FROM " + TABLE + " WHERE userName = '" + UserSearchingFor + "'"
 
     # EXECUTE QUERY
     cursor.execute(sql)
 
-    # SAVE INFO GENERATED FROM QUERY TO VARIABLE
-    result = cursor.fetchone()
+    # SAVE INFO GENERATED FROM QUERY TO TUPLE VARIABLE
+    resultUser = cursor.fetchone()
+
+    # PREPARE QUERY OF PROFILE TABLE TO BE EXECUTED
+    sql = "SELECT * FROM " + PROFILE_TABLE + " WHERE userName = '" + UserSearchingFor + "'"
+    
+    '''
+    (username, twitter handle, facebook handle, instagram handle)
+    ('qmelssen', 'qmeltwitter', 'qmelfacebook', 'qmelinsta')
+    ('qmelssen', '', 'qmelfacebook', 'qmelinsta')
+
+    Username: Quinn 
+    Email: qm@gmail.com
+    Facebook: 
+    Instagram: 
+    Snapchat: snapchathandle
+    '''
+
+    # EXECUTE QUERY
+    cursor.execute(sql)
+
+    # SAVE INFO GENERATED FROM QUERY TO TUPLE VARIABLE
+    resultProfile = cursor.fetchone()
+
 
     # CLOSE DATABASE OBJECTS AND CONNECTIONS
     cursor.close()
+
     db_connection.close()
 
-    return result
+    print(resultUser)
+    print(resultProfile)
+
+    return resultUser, resultProfile
 
 
 
@@ -62,27 +89,35 @@ def bot():
     responded = False
 
     # CREATES INFO VARIABLE WITH INFORMATION FROM THE DATABASE QUERY DONE IN SEARCHDATABASE
-    info = (searchDatabase(incoming_msg))
+    userInfo, userProfile = (searchDatabase(incoming_msg))
+
 
     # CHECK TO SEE IF QUERY RETURNED EMPTY AND IF SO GIVE PREDETERMINED MESSAGE
-    if info is None:
+    if userInfo is None:
         msg.body("Sorry, {} is not a SociAll user. Tell them to sign up at http://sociall.live/otherPages/sign-up-page.html!".format(incoming_msg))
 
     # IF LIST NOT EMPTY, PARSE INFO AND RETURN
     else:
-        # PARSE INFO INTO SEPERATE PARTS
-        userName = info[0]
-        firstName = info[1]
-        lastName = info[2]
-        phoneNumber = info[3]
-        email = info[4]
+        # LOAD INFO INTO DICTIONARY
+        userDict = { "SociAll Username: " : userInfo[0],
+                    "First Name: "        : userInfo[1],
+                    "Last Name: "         : userInfo[2],
+                    "Phone Number: "      : userInfo[3],
+                    "Email Address: "     : userInfo[4],
+                    "Twitter Handle: "    : userProfile[2],
+                    "Facebook Handle: "   : userProfile[3],
+                    "Snapchat Handle: "   : userProfile[4]
+        }
 
-        # PREPARE STRING FOR MSG BODY
-        finalString = ("SociAll Username: {}\n"
-                        "First Name: {}\n"
-                        "Last Name: {}\n"
-                        "Phone Number: {}\n"
-                        "Email Address: {}\n").format(userName, firstName, lastName, phoneNumber, email)
+        # PREPARE FINALSTRING TO BE ADDED TO
+        finalString = ''
+
+        # LOOP THROUGH DICTIONARY AND ADD COMPONENTS TO THE FINAL STRING
+        for key in userDict:
+            # IF DICT VALUE NOT NULL, LOAD INTO FINALSTRING
+            if userDict[key] != '':
+                finalString += (str(key) + str(userDict[key]) + '\n')
+
 
         # LOAD INFO INTO MSG BODY
         msg.body(finalString)
@@ -92,11 +127,6 @@ def bot():
 
 
     return str(resp)
-
-
-if __name__ == '__main__':
-    app.run()
-
 
 
 
@@ -125,5 +155,10 @@ def email():
     # REROUTE USER TO RESPONSE PAGE
     return redirect("http://sociall.live/otherPages/contact-confirmation.html")
     
+
+
+
+if __name__ == '__main__':
+    app.run()
 # to start file use 'python text_chat.py'
 # to expose port to internet use 'gunicorn -b :5000 applications:app'
