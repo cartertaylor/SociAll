@@ -1,5 +1,3 @@
-//var mysql = require ('mysql');
-
 /* Function: checkAgreeTerms()
    Algorithm: checks value of the terms check box element for either "" or "clicked"
    Precondition: is called when the checkbox for agree terms is clicked
