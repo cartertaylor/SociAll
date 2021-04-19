@@ -105,7 +105,6 @@ def bot():
         for item in userDict.items():
             # IF DICT VALUE NOT NULL, LOAD INTO FINALSTRING
             if item[1] != None:
-                print(item[0] + item[1])
                 finalString += item[0] + item[1] + '\n'
 
 
