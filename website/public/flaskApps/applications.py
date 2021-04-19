@@ -100,18 +100,17 @@ def bot():
     # IF LIST NOT EMPTY, PARSE INFO AND RETURN
     else:
         # LOAD INFO INTO DICTIONARY
-        userDict = collections.OrderedDict("SociAll Username: " = userInfo[0],
-                    "First Name: "        = userInfo[1],
-                    "Last Name: "         = userInfo[2],
-                    "Phone Number: "      = userInfo[3],
-                    "Email Address: "     = userInfo[4],
-                    "Twitter Handle: "    = userProfile[2],
-                    "Facebook Handle: "   = userProfile[3],
-                    "Snapchat Handle: "   = userProfile[4]
-        )
+        userDict = OrderedDict()
 
+        userDict["SociAll Username: "]  = userInfo[0]
+        userDict["First Name: "]        = userInfo[1]
+        userDict["Last Name: "]         = userInfo[2]
+        userDict["Phone Number: "]      = userInfo[3]
+        userDict["Email Address: "]     = userInfo[4]
+        userDict["Twitter Handle: "]    = userProfile[2]
+        userDict["Facebook Handle: "]   = userProfile[3]
+        userDict["Snapchat Handle: "]   = userProfile[4]
 
-        print(userDict)
 
 
         # PREPARE FINALSTRING TO BE ADDED TO
@@ -120,7 +119,7 @@ def bot():
         # LOOP THROUGH DICTIONARY AND ADD COMPONENTS TO THE FINAL STRING
         for item in userDict.items():
             # IF DICT VALUE NOT NULL, LOAD INTO FINALSTRING
-            if item[1] != '':
+            if item[1] != None:
                 print(item[0] + item[1])
                 finalString += item[0] + item[1] + '\n'
 
