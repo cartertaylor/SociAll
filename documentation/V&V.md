@@ -12,11 +12,13 @@ SociAll users will be able to access our website from any internet enabled devic
 ## 2. Verification (tests)
   ## 2.1 Unit Test
   We used pytest for our unit tests since it was a little easier to implement with our source code.\
-  Link to your GitHub folder where your automated unit tests are located: https://github.com/cartertaylor/SociAll/tree/master/website/public/flaskApps \
+  https://github.com/cartertaylor/SociAll/tree/master/website/public/flaskApps \
   ![](images/unit_test_screenshot.png)
   
   ## 2.2 Integration test
-  Unfortunately, at this time, we were unable to configure a working integration test for our project.
+  We used pytest for our integration tests tests since it was a little easier to implement with our source code.\
+  https://github.com/cartertaylor/SociAll/tree/master/website/public/flaskApps \
+  ![](images/integration_test_screenshot.png)
   
   ## 2.3 Acceptance
   Unfortunately, at this time, we were unable to configure a working acceptance test for our project.
