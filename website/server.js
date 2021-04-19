@@ -142,19 +142,22 @@ app.use('/', profileRouter);
       // create sql query line, creates a row within the table that hold profile info for given user 
       sql = mysql.format ("INSERT INTO ?? SET userName = ?", [profileTable, request.body.userName]);
 
-      // adds a table for the users profile using the userName
-      connection.query (
-      sql, function (err, result, fields)
+      // adds a table for the users profile using the userName (only if we succesfully create a user)
+      if (userCreated === true)
       {
-          if (err) throw err;
+        connection.query (
+        sql, function (err, result, fields)
+        {
+            if (err) throw err;
 
-          // successful additon of the table (this will always succeed if the user table is created first above^^)
-          else
-          {   
-              console.log(result);
-          }
+            // successful additon of the table (this will always succeed if the user table is created first above^^)
+            else
+            {   
+                console.log(result);
+            }
 
-      })
+        })
+      }
 
       // what we send back to the client 
       response.json({
