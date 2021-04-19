@@ -92,9 +92,9 @@ def bot():
         userDict["Last Name: "]         = userInfo[2]
         userDict["Phone Number: "]      = userInfo[3]
         userDict["Email Address: "]     = userInfo[4]
-        userDict["Twitter Handle: "]    = userProfile[2]
-        userDict["Facebook Handle: "]   = userProfile[3]
-        userDict["Snapchat Handle: "]   = userProfile[4]
+        userDict["Twitter Handle: "]    = userProfile[3]
+        userDict["Facebook Handle: "]   = userProfile[4]
+        userDict["Snapchat Handle: "]   = userProfile[5]
 
 
 
