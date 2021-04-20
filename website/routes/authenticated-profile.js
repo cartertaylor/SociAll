@@ -60,7 +60,7 @@ router.post('/edit/:socialMediaType', function(req, res) {
     // finds name of column given the post sent
     let columnChange = req.originalUrl;
     columnChange = columnChange.split('/');
-
+    
     // finds the split portion we want (social media type)
     foundColumn = columnChange[2];
     
@@ -93,6 +93,8 @@ function getSocialMediaQuery(socialMediaString, updatedUsername, currentUser)
 {   
     // initialize
     let sqlQuery = "";
+
+    console.log(socialMediaString);
 
     // determine query needed to be done
     switch (socialMediaString)
