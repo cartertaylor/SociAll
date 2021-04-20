@@ -44,34 +44,37 @@
             </div>
             <ul class="nav-menu" style = "margin-bottom: 0rem;">
               <li><a href="http://www.sociall.live" class="nav-links">Home</a></li>
-              <li><a href="./about-us.html" class="nav-links">About</a></li>
-              <li><a href="./contact.html" class="nav-links">Contact</a></li>
-              <li><a href="#" class="nav-links nav-links-btn">Sign up</a></li>
+              <li><a href="../otherPages/about-us.html" class="nav-links">About</a></li>
+              <li><a href="../otherPages/contact.html" class="nav-links">Contact</a></li>
+              <li><a href="http://www.sociall.live" class="nav-links nav-links-btn">Sign up</a></li>
             </ul>
         </nav>
         <script src="../res/js/menu.js"></script>
       </div>
 
       <!--Header Before sign up form-->
-      <h1 class = "text-center mt-4 mb-4" id = "userName">{{userName}}</h1>
-
+      <div class = "profile-container">
+        <span class="text1" class = "text-center mt-4 mb-4" id = "userName" style="font-family: Nunito, sans-serif; padding: 30px;">{{userName}}</span>
+      </div>
       
     
       <!--Profile picture and name-->
     <div class = "container d-flex justify-content-center mb-2 ">
-        <div class="card" style="width: 20rem;">
-            <img src="../res/images/suitJarJar.jpg" class="m-2 card-img-top rounded-circle img-max " alt="throw the personName here">
+        <div class="avatar" style="border: none">
+            <img src="../res/images/suitJarJar.jpg" class="" alt="throw the personName here">
             <div class="card-body">
                 <h5 class="card-title text-center" id ="personName">{{name}}</h5>
-                <p class="card-text text-center" id = "bio">{{bio}} 
+                <p class="card-text text-center " id = "bio">{{bio}} 
                 </p>
             </div>
         </div >
     </div>
         
-    <hr class="largeSpacing offset-4 col-4">
-    
-    <div class="row container-fluid largeSpacing largeSpacingBottom">
+    <div class = "container largeSpacing">
+      <hr class="largeSpacing offset-4 col-4">
+    </div>
+
+    <div class="row container-fluid largeSpacingBottom">
 
       <div class="offset-sm-1 col-sm-3">
         <div class = "container d-flex justify-content-center">
@@ -85,9 +88,7 @@
                 over here from our database. 
               </p>
             </div>
-            <div class="card-footer">
-              <p href="#" class="card-link text-center">Link</p>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -104,9 +105,7 @@
                 over here from our database. 
               </p>
             </div>
-            <div class="card-footer">
-              <p href="#" class="card-link text-center">Link</p>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -123,9 +122,7 @@
                 over here from our database. 
               </p>
             </div>
-            <div class="card-footer">
-              <p href="#" class="card-link text-center">Link</p>
-            </div>
+          
           </div>
         </div>
       </div>

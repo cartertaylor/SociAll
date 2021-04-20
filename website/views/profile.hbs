@@ -58,21 +58,25 @@
       </div>
 
       <!--Header Before sign up form-->
-      <h1 class = "text-center mt-4 mb-4" id = "userName">{{name}}</h1>
+      <div class = "profile-container">
+        <span class="text1" class = "text-center mt-4 mb-4" id = "userName" style="font-family: Nunito, sans-serif; padding: 30px;">{{userName}}</span>
+      </div>
 
       
     
       <!--Profile picture and name-->
     <div class = "container d-flex justify-content-center mb-2 ">
-        <div class="card" style="width: 20rem;">
-            <img src="../res/images/suitJarJar.jpg" class="m-2 card-img-top rounded-circle img-max " alt="throw the personName here">
+        <div class="avatar" style="border: none">
+            <img src="../res/images/suitJarJar.jpg" class="" alt="throw the personName here">
             <div class="card-body">
                 <h5 class="card-title text-center" id ="personName">{{name}}</h5>
                 <p class="card-text text-center" id = "bio">{{bio}} 
                 </p>
-                 <button type="button" class="btn edit-button" data-toggle="modal" data-target="#bioModal">
-                                Update Bio
-                </button>
+                  <div class = "text-center">
+                    <button type="button" class="btn edit-button " data-toggle="modal" data-target="#bioModal">
+                                    Update Bio
+                    </button>
+                  </div>
             </div>
         </div >
     </div>
@@ -112,7 +116,9 @@
         </div>
       </div>
 
-    <hr class="largeSpacing offset-4 col-4">
+    <div class = "container largeSpacing">
+      <hr class="largeSpacing offset-4 col-4">
+    </div>
     
     <div class="row container-fluid largeSpacing largeSpacingBottom">
 
@@ -129,11 +135,10 @@
                 over here from our database. 
               </p>
             </div>
-            <div class="card-footer">
+            <div class = "text-center">
               <button type="button" class="btn edit-button" data-toggle="modal" data-target="#userTwitterModal">
-                                <i class="fas fa-edit "></i>
-                </button>
-              <!-- <p href="#" class="card-link text-center">Link</p> -->
+                                  <i class="fas fa-edit "></i>
+              </button>
             </div>
           </div>
         </div>
@@ -152,12 +157,11 @@
                 over here from our database. 
               </p>
             </div>
-            <div class="card-footer">
-              <button type="button" class="btn edit-button" data-toggle="modal" data-target="#userFacebookModal">
-                                <i class="fas fa-edit "></i>
+              <div class = "text-center">
+                <button type="button" class="btn edit-button" data-toggle="modal" data-target="#userFacebookModal">
+                                    <i class="fas fa-edit "></i>
                 </button>
-              <!-- <p href="#" class="card-link text-center">Link</p> -->
-            </div>
+              </div>
           </div>
         </div>
       </div>
@@ -175,11 +179,10 @@
                 over here from our database. 
               </p>
             </div>
-            <div class="card-footer">
+            <div class = "text-center">
               <button type="button" class="btn edit-button" data-toggle="modal" data-target="#userSnapchatModal">
-                                <i class="fas fa-edit "></i>
-                </button>
-              <!-- <p href="#" class="card-link text-center">Link</p> -->
+                                  <i class="fas fa-edit "></i>
+              </button>
             </div>
           </div>
         </div>
