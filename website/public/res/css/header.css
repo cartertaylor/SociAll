@@ -93,6 +93,7 @@
     .nav-container
     {
         position: relative;
+        z-index: 1;
     }
 
     .nav-menu
