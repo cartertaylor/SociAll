@@ -114,6 +114,7 @@
     {
         background:  var(--darkgrey);
         left: 0;
+        padding: 0;;
         opacity: 1;
         transition: all 0.5s ease;
         overflow: hidden;
@@ -127,6 +128,10 @@
         width: 100%;
         display: table;
         overflow: hidden;
+    }
+
+    #search-user-page{
+        width: 30%;
     }
 
     .nav-links:hover

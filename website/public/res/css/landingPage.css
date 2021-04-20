@@ -208,7 +208,7 @@ lord-icon
 
 .masthead 
 {
-  background: linear-gradient(-45deg, #31d898, #48f5b2, #19ffa7, #19f0be);
+  background: linear-gradient(-45deg, #31d898, #48f5b2, #1fffe1, #51f3cd);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }

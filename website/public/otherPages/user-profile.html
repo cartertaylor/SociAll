@@ -74,8 +74,16 @@
             </div>
         </div >
     </div>
+
+
         
     <hr class="largeSpacing offset-4 col-4">
+
+        <div class="input-group" style="justify-content: center;">
+      <input type="search" id = "searcher" onInput="grabSearchVal(event)" class=" rounded" placeholder="Search For A User" aria-label="Search"
+        aria-describedby="search-addon" />
+      <button type="button" class="nav-links nav-links-btn" id="search-user-page" onclick= "getUser(event)">search</button>
+    </div>
     
     <div class="row container-fluid largeSpacing largeSpacingBottom">
 
@@ -86,7 +94,7 @@
               <img src="../res/images/icons/twitterIcon.png" class="mt-2 card-img-top icon-max center-block " alt="throw the personName here">
              </div>
             <div class="card-body">
-              <h5 class="card-title text-center" id ="socialMediaUserName">{{name}}Twitter</h5>
+              <h5 class="card-title text-center" id ="socialMediaUserName">Twitter</h5>
               <p class="card-text text-center" id = "bio">Hi, my name is {{name}}, I am currently a placeholder until we can funnel some user information
                 over here from our database. 
               </p>
@@ -105,7 +113,7 @@
               <img src="../res/images/icons/facebookIcon.png" class="mt-2 card-img-top icon-max center-block " alt="throw the personName here">
              </div>
             <div class="card-body">
-              <h5 class="card-title text-center" id ="socialMediaUserName">{{name}}Facebook</h5>
+              <h5 class="card-title text-center" id ="socialMediaUserName">Facebook</h5>
               <p class="card-text text-center" id = "bio">Hi, my name is {{name}}, I am currently a placeholder until we can funnel some user information
                 over here from our database. 
               </p>
@@ -124,7 +132,7 @@
               <img src="../res/images/icons/snapchatIcon.png" class="mt-2 card-img-top icon-max center-block " alt="throw the personName here">
              </div>
             <div class="card-body">
-              <h5 class="card-title text-center" id ="socialMediaUserName">{{name}}</h5>
+              <h5 class="card-title text-center" id ="socialMediaUserName">Snapchat</h5>
               <p class="card-text text-center" id = "bio">Hi, my name is {{name}}, I am currently a placeholder until we can funnel some user information
                 over here from our database. 
               </p>
@@ -164,6 +172,8 @@
 
         </div>
       </div>
+
+      
 
 
     </body>

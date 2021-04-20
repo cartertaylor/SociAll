@@ -117,12 +117,15 @@
   
 }
 
-.avatar:hover::before,
-.avatar:hover::after {
-  animation: pulse 1s linear infinite, cycle-colors 6s linear infinite;
-}
 
-.avatar:hover::after {
-  animation-delay: .5s;
+
+.card
+{
+  padding: 40px;
+  background: #fff;
+  max-width: 360px;
+  border-radius: 20px;
+  margin: 60px auto;
+  box-shadow: 0 5px 10px;
 }
 
