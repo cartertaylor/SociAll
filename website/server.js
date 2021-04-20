@@ -118,7 +118,7 @@ app.use('/', profileRouter);
     }
 
     // storing query (request.body is JSON user object)
-    let sql = mysql.format ("INSERT INTO ?? SET SET ?", [userTable, request.body]);
+    let sql = mysql.format ("INSERT INTO ?? SET ?", [userTable, request.body]);
 
     connection.query( sql, function (err, result) {
       
