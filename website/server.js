@@ -117,10 +117,10 @@ app.use('/', profileRouter);
       console.log("hash failed");
     }
 
-    // storing query
-    var sql = request.body;
+    // storing query (request.body is JSON user object)
+    let sql = mysql.format ("INSERT INTO ?? SET SET ?", [userTable, request.body]);
 
-    connection.query('INSERT INTO user SET ?', sql, function (err, result) {
+    connection.query( sql, function (err, result) {
       
       // if an error happens, we will send that back to the client
       if (err) 

@@ -117,6 +117,7 @@
         opacity: 1;
         transition: all 0.5s ease;
         overflow: hidden;
+        padding:0;
         z-index: 1;
     }
 
