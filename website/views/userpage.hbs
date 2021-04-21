@@ -61,7 +61,11 @@
       <!--Profile picture and name-->
     <div class = "container d-flex justify-content-center mb-2 ">
         <div class="avatar" style="border: none">
-            <img src="../../avatarFiles/{{profileFileName}}" class="" alt="throw the personName here">
+            {{# if profileFileName}}
+            <img src="../avatarFiles/{{profileFileName}}" class="" alt="throw the personName here">
+            {{else}}
+              <img src="../res/images/suitJarJar.jpg" class="" alt="throw the personName here">
+            {{/if}}
             <div class="card-body">
                 <h5 class="card-title text-center" id ="personName">{{name}}</h5>
                 <p class="card-text text-center " id = "bio">{{bio}} 
