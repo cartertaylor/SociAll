@@ -33,22 +33,33 @@ router.post('/edit/bio', function(req, res, next) {
     // finds the bio we are updating from
     updatedBio = req.body.message;
     
-    // create sql query line
-    sql = mysql.format ("UPDATE ?? SET bio = ? WHERE userName = ?", [profileTable, updatedBio, currentUser]);
+    console.log("yoooooooooooooooooo")
+    console.log(updatedBio.length);
 
-    // update the users bio
-    connection.query (
-        sql, function (err, result, fields)
-        {
-            if (err) throw err;
+    if (updatedBio.length > 200)
+    {
+        res.send("You can only have a max of 200 characters for your bio. Please go back and try again");
+    }
 
-            // otherwise we want the page to refresh with our new data
-            else
+    else
+    {
+        // create sql query line
+        sql = mysql.format ("UPDATE ?? SET bio = ? WHERE userName = ?", [profileTable, updatedBio, currentUser]);
+
+        // update the users bio
+        connection.query (
+            sql, function (err, result, fields)
             {
-                res.redirect(req.get('referer'));
-            }
+                if (err) throw err;
 
-        })
+                // otherwise we want the page to refresh with our new data
+                else
+                {
+                    res.redirect(req.get('referer'));
+                }
+
+            })
+    }
     
 });
 
