@@ -60,7 +60,7 @@ router.get('/profile', ensureAuthenticated, function(req, res, next) {
   currentUser = req.user.id;
   
   // start out the bio info
-  userBio = ""
+  userBio = "";
 
   // create sql query line (select the social media info as well)
   let sql = mysql.format ("SELECT bio, twitterUser, facebookUser, snapchatUser, avatarName FROM ?? WHERE userName = ?", [profileTable, currentUser]);
@@ -73,6 +73,7 @@ router.get('/profile', ensureAuthenticated, function(req, res, next) {
         if (err) throw err;
         
         console.log(result);
+
 
         // store bio info
         let userBio = result[0].bio;
@@ -101,8 +102,11 @@ router.get('/profile', ensureAuthenticated, function(req, res, next) {
           facebookUsername: facebookHandle,
           snapchatUsername: snapchatHandle,
           profileFileName: profileFile,
+          error: req.session.errors,
           success: req.session.success });
 
+          // reset errors after refresh
+          req.session.errors = null;
       });
 
 });

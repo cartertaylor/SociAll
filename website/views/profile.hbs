@@ -63,6 +63,16 @@
       </div>
 
       
+      {{# if error}}
+        <div class="alert text-center alert-danger alert-dismissible fade show" role="alert">
+          <strong>Hey!</strong> {{error}}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {{/if}}
+
+    
     
       <!--Profile picture and name-->
     <div class = "container d-flex justify-content-center mb-2 ">
