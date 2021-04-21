@@ -4,7 +4,39 @@ const passport = require('passport');
 const mysql = require('mysql')
 
 var multer  = require('multer')
-var upload = multer({ dest: 'public/avatarFiles' }) // where we store the profile picture temp.
+var upload = multer(
+    {   dest: 'public/avatarFiles', // where we store the profile picture temp.
+        fileFilter:(req, file, callback) => // filters out files of format we dont want
+        {
+            switch (file.mimetype)
+            {
+                default:
+                    console.log("did this work?")
+                    callback(null, false);
+                    return callback(new Error(" Only upload photo files!") );
+                    break;
+
+                case "image/png":
+                    console.log("png?")
+                    callback(null,true);
+                    break;
+
+                case "image/jpg":
+                    callback(null,true);
+                    break;
+                
+                case "image/jpeg":
+                    callback(null,true);
+                    break;
+
+                case "image/JPEG":
+                    callback(null,true);
+                    break;
+                
+            }
+            
+        }
+     }) 
 
 require('dotenv').config()
 
@@ -103,7 +135,7 @@ router.post('/edit/:socialMediaType', function(req, res) {
 });
 
 
-router.post('/avatar', upload.single('avatar'), function (req, res, next) {
+router.post('/avatar', filterFiles, upload.single('avatar'), function (req, res, next) {
     // req.file is the `avatar` file
     // req.body will hold the text fields, if there were any
 
@@ -131,6 +163,14 @@ router.post('/avatar', upload.single('avatar'), function (req, res, next) {
     
     
   })
+
+
+function filterFiles(req, res, next)
+    {
+        console.log("yoooooo")
+         console.log(req.file);
+         next();   
+    }
 
 
 // finds the query needed to be done depending on the post request details
