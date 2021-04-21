@@ -92,6 +92,7 @@ var connection = mysql.createConnection({
 //   });
 
 
+
 // Routes
 app.use('/', indexRouter);
 app.use('/', profileRouter);
@@ -260,7 +261,7 @@ app.use('/', profileRouter);
             currentName = result[0].firstName + " " + result[0].lastName;
 
              // create sql query line
-            sql = mysql.format ("SELECT bio, twitterUser, facebookUser, snapchatUser FROM ?? WHERE userName = ?", [profileTable, stringedName]);
+            sql = mysql.format ("SELECT bio, twitterUser, facebookUser, snapchatUser, avatarName FROM ?? WHERE userName = ?", [profileTable, stringedName]);
 
             // grab the existing bio information for user
             connection.query (
@@ -281,12 +282,17 @@ app.use('/', profileRouter);
 
                   // store snapchat username info
                   let snapchatHandle = result[0].snapchatUser;
+
+                  // store profile picture file name
+                  let profileFile = result[0].avatarName;
+                  
                   
                   response.render('userpage', {userName: currentUserName,
                     name: currentName,
                     bio: userBio,
                     twitterUsername: twitterHandle,
                     facebookUsername: facebookHandle,
+                    profileFileName: profileFile,
                     snapchatUsername: snapchatHandle});
                 });
 
