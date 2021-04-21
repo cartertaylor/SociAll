@@ -67,16 +67,20 @@
       <!--Profile picture and name-->
     <div class = "container d-flex justify-content-center mb-2 ">
         <div class="avatar" style="border: none">
+          {{# if profileFileName}}
             <img src="../avatarFiles/{{profileFileName}}" class="" alt="throw the personName here">
-            <button type="button" class="btn edit-button" data-toggle="modal" data-target="#avatarModal">
-                                  <i class="fas fa-edit "></i>
-              </button>
+          {{else}}
+            <img src="../res/images/suitJarJar.jpg" class="" alt="throw the personName here">
+          {{/if}}
+          <button type="button" class="btn edit-button" data-toggle="modal" data-target="#avatarModal">
+                                <i class="fas fa-edit "></i>
+          </button>
             <div class="card-body">
                 <h5 class="card-title text-center" id ="personName">{{name}}</h5>
                 <p class="card-text text-center" id = "bio">{{bio}} 
                 </p>
                   <div class = "text-center">
-                    <button type="button" class="btn edit-button " data-toggle="modal" data-target="#avatarModal">
+                    <button type="button" class="btn edit-button " data-toggle="modal" data-target="#bioModal">
                                     Update Bio
                     </button>
                   </div>
@@ -114,10 +118,49 @@
         </div>
       </div>
 
-    <div class = "container largeSpacing">
+
+     <!--change bio info-->
+        <div class="modal fade" id="bioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ 
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Update Bio</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class = "row">
+
+                <div class = "col-4"></div>
+                <!-- Log in pops up upon click -->
+                <form action = "/edit/bio" method = "post">
+                    <div class="form-group">
+                       <!-- Message Row-->
+                        <div class="form-group">
+                            <label for="validationDefault03"></label>
+                            <input type="text" class="form-control" style = "" id="validationDefault03" placeholder="Type Here" name = "message" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onClick="window.location.reload();"> Update</button>
+                </form>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <div class = "container largeSpacing" style = "margin-top:170px">
       <hr class="largeSpacing offset-4 col-4">
     </div>
     
+
+
+
+
     <div class="row container-fluid largeSpacing largeSpacingBottom">
 
       <!-- Twitter Card -->
