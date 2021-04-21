@@ -12,6 +12,7 @@
 {
     width: 100%;
     background-color: var(--darkgrey);
+    z-index: 1;
 }
 
 .navbar
@@ -23,6 +24,7 @@
     width: 90%;
     max-width: 1720px; 
     margin: 0 auto;
+    z-index: 1;
 }
 
 
