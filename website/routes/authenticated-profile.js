@@ -3,6 +3,9 @@ var router = express.Router();
 const passport = require('passport');
 const mysql = require('mysql')
 
+var multer  = require('multer')
+var upload = multer({ dest: 'public/avatarFiles' }) // where we store the profile picture temp.
+
 require('dotenv').config()
 
 // grabbing env variables for database
@@ -87,6 +90,37 @@ router.post('/edit/:socialMediaType', function(req, res) {
         })
     
 });
+
+
+router.post('/avatar', upload.single('avatar'), function (req, res, next) {
+    // req.file is the `avatar` file
+    // req.body will hold the text fields, if there were any
+
+
+    // store file name in the users profile
+    avatarFileName = req.file.filename
+
+    // create sql query line
+    sql = mysql.format ("UPDATE ?? SET avatarName = ? WHERE userName = ?", [profileTable, avatarFileName, currentUser]);
+
+    // update the user name for given social media
+    connection.query (
+    sql, function (err, result)
+    {
+        if (err) throw err; 
+        
+        // otherwise we want the page to refresh with our new data
+        else
+        {
+            console.log(result);
+            res.redirect(req.get('referer'));
+        }
+
+    })
+    
+    
+  })
+
 
 // finds the query needed to be done depending on the post request details
 function getSocialMediaQuery(socialMediaString, updatedUsername, currentUser)

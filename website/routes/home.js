@@ -53,7 +53,7 @@ router.post('/submit', checkNotAuthenticated, setModal, passport.authenticate('l
 
 }) );
 
-// userpage info for logged in user
+// route helps 
 router.get('/profile', ensureAuthenticated, function(req, res, next) {
   
   // grab current session user
@@ -63,7 +63,7 @@ router.get('/profile', ensureAuthenticated, function(req, res, next) {
   userBio = ""
 
   // create sql query line (select the social media info as well)
-  let sql = mysql.format ("SELECT bio, twitterUser, facebookUser, snapchatUser FROM ?? WHERE userName = ?", [profileTable, currentUser]);
+  let sql = mysql.format ("SELECT bio, twitterUser, facebookUser, snapchatUser, avatarName FROM ?? WHERE userName = ?", [profileTable, currentUser]);
 
   // grab the existing bio information for user
   connection.query (
@@ -86,6 +86,9 @@ router.get('/profile', ensureAuthenticated, function(req, res, next) {
         // store snapchat username info
         let snapchatHandle = result[0].snapchatUser;
 
+        // store profile picture file name
+        let profileFile = result[0].avatarName;
+
         // store sociall username
         let userName = req.user.id;
         
@@ -97,6 +100,7 @@ router.get('/profile', ensureAuthenticated, function(req, res, next) {
           twitterUsername: twitterHandle,
           facebookUsername: facebookHandle,
           snapchatUsername: snapchatHandle,
+          profileFileName: profileFile,
           success: req.session.success });
 
       });

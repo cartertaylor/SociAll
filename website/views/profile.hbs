@@ -67,24 +67,28 @@
       <!--Profile picture and name-->
     <div class = "container d-flex justify-content-center mb-2 ">
         <div class="avatar" style="border: none">
-            <img src="../res/images/suitJarJar.jpg" class="" alt="throw the personName here">
+            <img src="../avatarFiles/{{profileFileName}}" class="" alt="throw the personName here">
+            <button type="button" class="btn edit-button" data-toggle="modal" data-target="#avatarModal">
+                                  <i class="fas fa-edit "></i>
+              </button>
             <div class="card-body">
                 <h5 class="card-title text-center" id ="personName">{{name}}</h5>
                 <p class="card-text text-center" id = "bio">{{bio}} 
                 </p>
                   <div class = "text-center">
-                    <button type="button" class="btn edit-button " data-toggle="modal" data-target="#bioModal">
+                    <button type="button" class="btn edit-button " data-toggle="modal" data-target="#avatarModal">
                                     Update Bio
                     </button>
                   </div>
             </div>
         </div >
     </div>
-    
+
+   
 
     
-    <!--change bio info-->
-        <div class="modal fade" id="bioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <!--change profile picture-->
+        <div class="modal fade" id="avatarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
  
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
@@ -99,15 +103,9 @@
 
                 <div class = "col-4"></div>
                 <!-- Log in pops up upon click -->
-                <form action = "/edit/bio" method = "post">
-                    <div class="form-group">
-                       <!-- Message Row-->
-                        <div class="form-group">
-                            <label for="validationDefault03"></label>
-                            <input type="text" class="form-control" style = "" id="validationDefault03" placeholder="Type Here" name = "message" required>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary" onClick="window.location.reload();"> Update</button>
+                <form action="/avatar" method="post" enctype="multipart/form-data">
+                  <input type="file" name="avatar" />
+                  <input type="submit" name="btn_upload_profile_pic" value="Upload" />
                 </form>
                 
               </div>
