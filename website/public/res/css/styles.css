@@ -26,7 +26,7 @@ body
 .subheading
 {
   padding: 20px;
-  font-size: 50px;
+  font-size: 4rem;
   font-weight: bolder;
   color: transparent;
   -webkit-background-clip: text;
@@ -79,7 +79,7 @@ body
     background-position-y: 0%;
   }
   100%{
-    background-size: 300px;
+    background-size: 320px;
   }
 }
 
