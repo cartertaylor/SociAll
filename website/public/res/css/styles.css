@@ -25,12 +25,11 @@ body
 
 .subheading
 {
-  padding: 50px;
+  padding: 20px;
   font-size: 50px;
   font-weight: bolder;
   color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
   background-image: url("https://raw.githubusercontent.com/WebDevSimplified/css-challenges/master/Animated%20Text%20Reveal/reveal_background.jpg");
   background-repeat: repeat-x;
   animation: reveal-background 2s ease-in-out;
@@ -80,7 +79,7 @@ body
     background-position-y: 0%;
   }
   100%{
-    background-size: 200px;
+    background-size: 300px;
   }
 }
 
@@ -108,18 +107,11 @@ body
 
 .landing-description
 {
-  position: relative;
-  padding: 15px;
-  width: 50%;
+  width: 70%;
   font-size: 100px;
   font-weight: bolder;
   color: transparent;
-  -webkit-background-clip: text;
   background-clip: text;
-  background-image: url("https://raw.githubusercontent.com/WebDevSimplified/css-challenges/master/Animated%20Text%20Reveal/reveal_background.jpg");
-  background-repeat: repeat-y;
-  animation: reveal-next-background 1s ease-in-out;
-  animation-fill-mode: forwards;
   line-height: 50%;
   
 
