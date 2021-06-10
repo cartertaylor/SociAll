@@ -13,19 +13,21 @@
     animation: gradient 15s ease infinite;
 }
 
-.landing-des-container
-{
-  padding: 50px;
-}
-
 
 .bolder-text
 {
-  text-align: left;
   font-size: xx-large;
   font-weight: bolder;
   font-family: Arial, Helvetica, sans-serif;
   color: #000000;
+}
+
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
 .text
@@ -49,7 +51,6 @@
   
   position: relative;
   top: 20%;
-  
   color:black;
   font-size: xx-large;
   
@@ -244,7 +245,6 @@ lord-icon
 .nav-link
 {
   font-size: large;
-  left: 50%;
   position: relative;
   overflow: hidden;
   display: table;
