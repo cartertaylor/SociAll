@@ -85,12 +85,15 @@
           <div class="card" style="width: 25rem;">
             <div class="row text-center">
               <img src="../res/images/icons/twitterIcon.png" class="mt-2 card-img-top icon-max center-block " alt="throw the personName here">
-             </div>
+            </div>
             <div class="card-body">
               <h5 class="card-title text-center" id ="socialMediaUserName">{{twitterUsername}}</h5>
-              <p class="card-text text-center" id = "bio">Hi, my name is {{name}}, I am currently a placeholder until we can funnel some user information
-                over here from our database. 
+              {{# if twitterUsername}}
+              <a class="twitter-timeline" href="https://twitter.com/{{twitterUsername}}" data-tweet-limit = "5">Twitter Account Not Found</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              {{else}}
+              <p class="card-text text-center" id = "bio">{{name}} hasn't added their Twitter handle yet! Check back soon to see a snapshot of their feed once they do!
               </p>
+              {{/if}}
             </div>
             
           </div>
@@ -102,7 +105,7 @@
           <div class="card" style="width: 25rem;">
             <div class="row text-center">
               <img src="../res/images/icons/facebookIcon.png" class="mt-2 card-img-top icon-max center-block " alt="throw the personName here">
-             </div>
+            </div>
             <div class="card-body">
               <h5 class="card-title text-center" id ="socialMediaUserName">{{facebookUsername}}</h5>
               <p class="card-text text-center" id = "bio">Hi, my name is {{name}}, I am currently a placeholder until we can funnel some user information
@@ -119,7 +122,7 @@
           <div class="card" style="width: 25rem;">
             <div class="row text-center">
               <img src="../res/images/icons/snapchatIcon.png" class="mt-2 card-img-top icon-max center-block " alt="throw the personName here">
-             </div>
+            </div>
             <div class="card-body">
               <h5 class="card-title text-center" id ="socialMediaUserName">{{snapchatUsername}}</h5>
               <p class="card-text text-center" id = "bio">Hi, my name is {{name}}, I am currently a placeholder until we can funnel some user information
